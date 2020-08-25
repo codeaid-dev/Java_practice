@@ -24,7 +24,7 @@ int size = 50;
 		
 	public static void main(String[] args) {
 		
-		new Abcdefgweek06practise();
+		new RightClick();
 		}
 		
 		class Mylisn extends MouseAdapter{
