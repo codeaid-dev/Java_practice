@@ -84,7 +84,7 @@ public class SlotMachine extends JFrame implements ActionListener {
             for (int i=0; i < status.length; i++) {
                 status[i] = false;
             }
-            label.setText("ストップで数字を揃えよう");
+            label.setText("ストップでスロット画像を揃えよう");
             btn[0].setEnabled(false);
             btn[1].setEnabled(true);
             btn[2].setEnabled(true);
