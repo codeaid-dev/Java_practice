@@ -18,7 +18,7 @@ public class SlotMini extends JFrame{
   boolean[] status = {false, false, false};
 
   public SlotMini(){
-    setTitle("スロットマシーン");
+    setTitle("スロットマシン");
     setBounds(100, 100, 500, 200);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
