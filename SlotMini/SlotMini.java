@@ -15,10 +15,10 @@ public class SlotMini extends JFrame{
   JButton btn[] = new JButton[3];
   JButton start;
   Timer timer;
-  boolean[] status = {false, false, false};
+  boolean[] status = {true, true, true};
 
   public SlotMini(){
-    setTitle("スロットマシーン");
+    setTitle("スロットマシン");
     setBounds(100, 100, 500, 200);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -28,10 +28,12 @@ public class SlotMini extends JFrame{
     container.add(label1, BorderLayout.NORTH);
 
     JPanel panel1 = new JPanel();
-    int num = (int)(Math.random() * 10);
-    slot[0] = new JLabel(String.valueOf(num));
-    slot[1] = new JLabel(String.valueOf(++num));
-    slot[2] = new JLabel(String.valueOf(++num));
+    int num1 = (int)(Math.random() * 10);
+    slot[0] = new JLabel(String.valueOf(num1));
+    int num2 = (int)(Math.random() * 10);
+    slot[1] = new JLabel(String.valueOf(num2));
+    int num3 = (int)(Math.random() * 10);
+    slot[2] = new JLabel(String.valueOf(num3));
     slot[0].setFont(new Font("Arial", Font.PLAIN, 80));
     slot[1].setFont(new Font("Arial", Font.PLAIN, 80));
     slot[2].setFont(new Font("Arial", Font.PLAIN, 80));
