@@ -14,7 +14,7 @@ public class IPHostAddress {
       System.out.println("");
 
       } catch (Exception e) {
-          //System.out.println("Unable to find address for " + e.getMessage);
+          System.out.println("Unable to find address for " + e.getMessage());
           e.printStackTrace();
       }
 
@@ -34,7 +34,7 @@ public class IPHostAddress {
           }
         }
       } catch (SocketException se) {
-        //System.out.println("Error getting network interfaces: " + se.getMessage);
+        System.out.println("Error getting network interfaces: " + se.getMessage());
         se.printStackTrace();
     }
   }
