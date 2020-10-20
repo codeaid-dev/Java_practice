@@ -28,8 +28,8 @@ public class IPHostAddress {
           if (!addrList.hasMoreElements()) continue;
           while(addrList.hasMoreElements()) {
             InetAddress address = addrList.nextElement();
-            //System.out.print("\tAddress " + ((address instanceof Inet4Address ? "(IPv4)"
-            //                                : (address instanceof Inet6Address ? "(IPv6)" : "(?)"))));
+            System.out.print("\tAddress " + ((address instanceof Inet4Address ? "(IPv4)"
+                                            : (address instanceof Inet6Address ? "(IPv6)" : "(?)"))));
             System.out.println(": " + address.getHostAddress());
           }
         }
