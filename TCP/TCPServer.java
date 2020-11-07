@@ -11,8 +11,8 @@ public class TCPServer {
       System.out.println("sever start...");
       socket = server.accept();
 
-      //System.out.println("client: "+socket.getInetAddress().getLocalHost()+" access successed");
-      System.out.println("client: "+socket.getInetAddress().getHostName()+" access successed");
+      System.out.println("client: "+socket.getInetAddress().getLocalHost()+" access successed");
+      //System.out.println("client: "+socket.getInetAddress().getHostName()+" access successed");
       System.out.println("client:access successed");
 
       InputStream is = socket.getInputStream();
