@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
@@ -44,14 +46,28 @@ public class WebClient {
                 new InputStreamReader(con.getInputStream()));
         String inputLine;
         StringBuffer response = new StringBuffer();
+        FileWriter fw = new FileWriter("output.txt", true);
+        PrintWriter pw = new PrintWriter(fw);
 
+        int flag = 0;
         while ((inputLine = in.readLine()) != null) {
+            if (inputLine.indexOf("<body") != -1) {
+                flag = 1;
+            } else if (inputLine.indexOf("</body>") != -1) {
+                flag = 0;
+                pw.println(inputLine);
+            }
+            if (flag == 1) {
+                pw.println(inputLine);
+            }
+
             response.append(inputLine);
         }
+        pw.close();
         in.close();
 
        //print result
-        System.out.println(response.toString());
+        //System.out.println(response.toString());
 
     }
 

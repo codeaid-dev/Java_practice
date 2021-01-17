@@ -1,3 +1,5 @@
 .vscode
 *.class
 output.txt
+Test.java
+*.jar
