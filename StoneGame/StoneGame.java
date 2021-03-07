@@ -4,6 +4,7 @@ public class StoneGame {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     int max = 0;
+    // 最初に取っていく石の数を入力する
     while (max < 10) {
       System.out.println("石の数を入力してください（10個以上)：");
       String str = scan.nextLine();
@@ -11,6 +12,8 @@ public class StoneGame {
       max = Integer.parseInt(str);
     }
 
+    // 残りの数が1以下になるまで交互に石を取っていく
+    // 取る数は1~3なのでそれ以外の数値のときは繰り返し聞く
     int turn = 1;
     while (true) {
       System.out.println("石の数："+Integer.toString(max));
@@ -41,6 +44,7 @@ public class StoneGame {
       }
     }
 
+    // 結果を判定する
     if (max == 1 && turn == 1) {
       System.out.println("プレイヤー2の勝ちです");
     } else if (max == 1 && turn == 2) {
