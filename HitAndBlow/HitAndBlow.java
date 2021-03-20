@@ -1,5 +1,6 @@
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HitAndBlow {
@@ -13,7 +14,7 @@ public class HitAndBlow {
         digits.add(n);
       }
     }
-    System.out.println(digits);
+    //System.out.println(digits);
     String target = "";
     for (int n : digits) {
       target += Integer.toString(n);
@@ -23,6 +24,7 @@ public class HitAndBlow {
     while (true) {
       String num = "";
       ArrayList<Integer> nums = new ArrayList<Integer>();
+      ArrayList<String> check = new ArrayList<String>(Arrays.asList("","","",""));
       int hit = 0;
       int blow = 0;
       // 4桁の入力を求める
@@ -37,19 +39,26 @@ public class HitAndBlow {
 
       // 入力した4桁とランダムに選んだ4桁を比較する
       // 同じ数値が重複していないことが前提
+      // 同じ数値が存在することを考慮して$check[]配列に情報を入れる
+      // hitチェック
       for (int i = 0; i < nums.size(); i++) {
-        for (int j = 0; j < digits.size(); j++) {
-          if (nums.get(i) == digits.get(j)) {
-            if (i == j) {
-              hit++;
-            } else {
+        if (nums.get(i) == digits.get(i)) {
+          hit++;
+          check.set(i, "hit");
+        }
+      }
+      // blowチェック
+      for (int i = 0; i < nums.size(); i++) {
+        if (check.get(i) == "hit") continue;
+        for (int j = 0; j < nums.size(); j++) {
+          if (nums.get(j) == digits.get(i)) {
+            if (check.get(j) != "hit" && check.get(j) != "blow") {
               blow++;
+              check.set(j, "blow");
             }
-            break;
           }
         }
       }
-
       if (hit == 4) {
         System.out.println("クリア！！");
         break;
