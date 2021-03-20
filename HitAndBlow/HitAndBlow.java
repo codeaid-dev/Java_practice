@@ -6,13 +6,12 @@ import java.util.Scanner;
 public class HitAndBlow {
   public static void main(String[] args) {
     // ランダムに4桁の数値を作成する
-    // 同じ数値が重複しないようにする
     ArrayList<Integer> digits = new ArrayList<Integer>();
     while (digits.size() != 4) {
       int n = (int)(Math.random() * 10);
-      if (!digits.contains(n)) {
+      //if (!digits.contains(n)) {
         digits.add(n);
-      }
+      //}
     }
     //System.out.println(digits);
     String target = "";
