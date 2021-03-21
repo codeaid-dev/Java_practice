@@ -9,7 +9,11 @@ public class HitAndBlow {
     ArrayList<Integer> digits = new ArrayList<Integer>();
     while (digits.size() != 4) {
       int n = (int)(Math.random() * 10);
+<<<<<<< HEAD
       //if (!digits.contains(n)) { // 同じ数値が重複しないようにする
+=======
+      //if (!digits.contains(n)) {
+>>>>>>> 711e04f95d9a06bf89e76f4066f0c28eb67798f5
         digits.add(n);
       //}
     }
