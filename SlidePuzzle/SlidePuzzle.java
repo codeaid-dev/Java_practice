@@ -31,8 +31,8 @@ public class SlidePuzzle extends JFrame {
       tiles[i].setFont(new Font("Arial", Font.PLAIN, 80));
       tiles[i].addMouseListener(new labelListener());
       panel.add(tiles[i]);
-      container.add(panel, BorderLayout.CENTER);
     }
+    container.add(panel, BorderLayout.CENTER);
     // マス目の数字をシャッフル
     for (int i=1; i<tiles.length; i++) {
       int num = (int)(Math.random() * i);
