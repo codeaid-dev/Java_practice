@@ -14,8 +14,8 @@ public class MatchingGame extends JFrame {
   ArrayList<ImageIcon> CardImage = new ArrayList<ImageIcon>();
   ArrayList<JLabel> cards = new ArrayList<JLabel>();
   ArrayList<Integer> status = new ArrayList<Integer>(); // 0:close, 1:open
-  int first[] = new int[2];
-  int second[] = new int[2];
+  int first[] = new int[2]; // element0:card number, element1: card place
+  int second[] = new int[2]; // element0:card number, element1: card place
   final int CARDSNUM = 14;
 
   // read image files for every cards and create JLabel to add it on panel with event for each.
