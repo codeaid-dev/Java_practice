@@ -103,11 +103,11 @@ public class MatchingGameCom extends JFrame {
             if (first[0] != second[0]) {
               setBack(first);
               setBack(second);
+              turn = true;
+              timer.stop();
             }
             first[0] = 0;
             second[0] = 0;
-            turn = true;
-            timer.stop();
             return;
           }
 
