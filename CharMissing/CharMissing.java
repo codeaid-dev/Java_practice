@@ -15,7 +15,7 @@ public class CharMissing {
     Scanner scan = new Scanner(System.in);
     String ans = scan.nextLine();
 
-    if (ans.equals(alp[hide])) {
+    if (ans.equalsIgnoreCase(alp[hide])) {
       System.out.println("正解！\n");
     } else {
       System.out.println("不正解\n正解は「"+alp[hide]+"」\n");

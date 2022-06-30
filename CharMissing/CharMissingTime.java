@@ -20,13 +20,13 @@ public class CharMissingTime {
 
     long end = System.currentTimeMillis();
 
-    if (ans.equals(alp[hide])) {
+    if (ans.equalsIgnoreCase(alp[hide])) {
       System.out.println("正解！\n");
+      System.out.println("かかった時間：" + Long.toString((end - start) / 1000) + "秒\n");
     } else {
       System.out.println("不正解\n正解は「"+alp[hide]+"」\n");
     }
 
-    System.out.println("かかった時間：" + Long.toString((end - start) / 1000) + "秒\n");
     scan.close();
   }
 }
