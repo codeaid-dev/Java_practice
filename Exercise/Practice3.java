@@ -6,8 +6,8 @@ public class Practice3 {
     System.out.print("入力2 >>");
     String s2 = new java.util.Scanner(System.in).nextLine();
 //    s2 = s2.toUpperCase();
-//    if (s1.equals(s2)) {
-    if (s1.equalsIgnoreCase(s2)) {
+    if (s1.toUpperCase().equals(s2.toUpperCase())) {
+//    if (s1.equalsIgnoreCase(s2)) {
       System.out.println("同じです");
     } else {
       System.out.println("違います");
