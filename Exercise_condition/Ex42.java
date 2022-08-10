@@ -1,15 +1,15 @@
 public class Ex42 {
   public static void main(String[] args) {
-    System.out.print("入力 >>");
-    String s = new java.util.Scanner(System.in).nextLine();
-    int total=0;
-    for (int i=1; i<=3; i++) {
-      String work = "";
-      for (int j=0; j<i; j++) {
-        work += s;
+    int[] listOne = {3,6,6,12,15,18,21};
+    int[] listTwo = {4,8,12,16,20,24,28};
+    int[] listThree = new int[7];
+    for (int i=0; i<listOne.length; i++) {
+      if (i%2==1) {
+        listThree[i] = listOne[i];
+      } else {
+        listThree[i] = listTwo[i];
       }
-      total += Integer.parseInt(work);
     }
-    System.out.println(total);
+    System.out.println(java.util.Arrays.toString(listThree));
   }
 }

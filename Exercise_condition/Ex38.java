@@ -1,4 +1,4 @@
-public class Ex43 {
+public class Ex38 {
   public static void main(String[] args) {
     System.out.print("入力 >>");
     String[] s = new java.util.Scanner(System.in).nextLine().split(",");
