@@ -8,6 +8,7 @@ public class Ex9 {
     String s = new java.util.Scanner(System.in).nextLine();
     String[] ss = s.split("");
     Set<String> set = new HashSet<>(Arrays.asList(ss));
+//    Set<String> set = new HashSet<>(Set.of(ss)); //重複する要素が存在するので使用できない
     System.out.println("種類数："+set.size());
   }
 }
