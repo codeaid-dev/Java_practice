@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ex25 {
+public class Ex31 {
   public static void main(String[] args) {
-    String colors = "red,yellow,black,blue,white,green,pink";
-    String[] cl = colors.split(",");
+    String[] ss = {"a", "b", "c", "d", "", "f", "g", "", "h"};
     List<String> result = new ArrayList<>();
-    for (String c : cl) {
-      if (c.length() > 4) {
-        result.add(c);
+    for (String s : ss) {
+      if (s.equals("")) {
+        break;
       }
+      result.add(s);
     }
     System.out.println(result.toString());
   }
