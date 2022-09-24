@@ -12,6 +12,10 @@ public class Practice13 {
     }
     // ツェラーの公式
     int h = (year+year/4-year/100+year/400+(13*month+8)/5+date) % 7;
-    System.out.println(year+"年"+month+"月"+date+"日は"+week[h]+"です");
+    if (month > 12) {
+      System.out.println((++year)+"年"+(month-12)+"月"+date+"日は"+week[h]+"です");
+    } else {
+      System.out.println(year+"年"+month+"月"+date+"日は"+week[h]+"です");
+    }
   }
 }
