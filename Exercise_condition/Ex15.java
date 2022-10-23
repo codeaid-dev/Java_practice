@@ -4,6 +4,7 @@ public class Ex15 {
     while (f <= 50) {
       double c = (double)(f - 32) * 5 / 9;
       System.out.printf("華氏%d度 = 摂氏%.2f度\n",f,c);
+      System.out.print(String.format("華氏%d度 = 摂氏%.2f度\n",f,c));
       f += 10;
     }
   }

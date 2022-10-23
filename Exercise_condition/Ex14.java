@@ -1,14 +1,14 @@
 public class Ex14 {
   public static void main(String[] args) {
-    int total=0,cnt=0;
-    System.out.print("入力>>");
-    int num = new java.util.Scanner(System.in).nextInt();
-    while (num != 0) {
-      total += num;
-      cnt++;
+    int total=0,cnt=0,num=0;
+//    System.out.print("入力>>");
+//    int num = new java.util.Scanner(System.in).nextInt();
+    do {
       System.out.print("入力>>");
       num = new java.util.Scanner(System.in).nextInt();
-    }
+      total += num;
+      if (num != 0) cnt++;
+    } while (num != 0);
     System.out.println(cnt+"回入力・合計"+total+"・平均"+((double)total/cnt));
   }
 }
