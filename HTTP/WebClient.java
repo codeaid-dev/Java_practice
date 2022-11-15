@@ -27,7 +27,8 @@ public class WebClient {
    //HTTP GET request
     private void sendGet() throws Exception {
 
-        String url = "http://www.gin.ics.ritsumei.ac.jp/";
+//        String url = "http://www.gin.ics.ritsumei.ac.jp/";
+        String url = "https://codeaid.jp/";
 
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
