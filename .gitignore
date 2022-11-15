@@ -2,4 +2,5 @@
 *.class
 output.txt
 Test.java
+Sample.java
 *.jar
