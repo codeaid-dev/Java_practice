@@ -5,9 +5,6 @@ import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedHashMap;
 import java.util.TreeSet;
-
-import jdk.nashorn.api.tree.Tree;
-
 import java.util.TreeMap;
 
 public class CollectionSample {
