@@ -21,7 +21,7 @@ public class MatchingGameImg extends JFrame {
   // read image files for every cards and create JLabel to add it on panel with event for each.
   void initCards() {
     for (int i=0; i<=CARDSNUM; i++) {
-      ImageIcon icon = new ImageIcon(new ImageIcon("card" + i + ".png").getImage().getScaledInstance(82, 120, Image.SCALE_DEFAULT));
+      ImageIcon icon = new ImageIcon(new ImageIcon("images/card" + i + ".png").getImage().getScaledInstance(82, 120, Image.SCALE_DEFAULT));
       CardImage.add(icon);
     }
     for (int i=1; i<=CARDSNUM; i++) {
