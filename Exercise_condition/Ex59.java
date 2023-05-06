@@ -11,6 +11,7 @@ public class Ex59 {
         System.out.println(i+1);
         System.out.println(s1s[i]);
         System.out.println(s2s[i]);
+        break;
       }
     }    
   }
