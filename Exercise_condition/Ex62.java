@@ -4,10 +4,13 @@ public class Ex62 {
     System.out.print("開催年 >>");
     int year = new java.util.Scanner(System.in).nextInt();
     int times = (year - 1896) / 4;
+    if ((year - 1896) % 4 != 0) {
+      times += 1;
+    }
     for (int i=times; i<place.length; i++) {
-        if (i!=5 && i!=11 && i!=12) {
-            System.out.println("第"+(i+1)+"回 "+place[i]); 
-        } 
+      if (i!=5 && i!=11 && i!=12) {
+          System.out.println("第"+(i+1)+"回 "+place[i]); 
+      } 
     }  
   }
 }
