@@ -4,8 +4,9 @@ public class Ex39 {
     String s1 = new java.util.Scanner(System.in).nextLine();
     String s2 = "";
     for (int i=s1.length()-1; i>=0; i--) {
-      char w = s1.charAt(i);
-      s2 += String.valueOf(w);
+      s2 += s1.charAt(i);
+      //char w = s1.charAt(i);
+      //s2 += String.valueOf(w);
     }
     int n1 = Integer.parseInt(s1);
     int n2 = Integer.parseInt(s2);
