@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.io.FileOutputStream;
 import java.util.Iterator;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -43,8 +44,9 @@ public class JsonSample {
     } else { //ファイルがない
       try {
         ObjectNode root = mapper.createObjectNode();
+        FileOutputStream fos = new FileOutputStream(json);
         root.put(username, password);
-        mapper.writeValue(json, root);
+        mapper.writeValue(fos, root);
       } catch (IOException e) {
         e.printStackTrace();
       }
