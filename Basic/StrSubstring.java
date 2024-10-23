@@ -1,5 +1,3 @@
-package Basic;
-
 public class StrSubstring {
   public static void main(String[] args) {
     String str = "Good Morning Everyone.";

@@ -1,10 +1,15 @@
 public class Ex11 {
   public static void main(String[] args) {
-    int up=20, bottom=35, height=30;
-    int tri = bottom*height/2;
-    int tra = (up+bottom)*height/2;
-    int rec = bottom*height;
-    int cir = (int)((height/2)*(height/2)*3.14);
-    System.out.println("総面積は"+(tri+tra+rec+cir)+"平方cmです");
+    int count = 0;
+    //int total = count++;
+    int total = ++count;
+    System.out.println("ひつじが"+count+"匹");
+    //total = count++;
+    total = ++count;
+    System.out.println("ひつじが"+count+"匹");
+    //total = count++;
+    total = ++count;
+    System.out.println("ひつじが"+count+"匹");
+    System.out.println("全部で"+total+"匹");
   }
 }

@@ -12,5 +12,6 @@ public class StrFormat {
     System.out.println(String.format("「%.2f」", d));
     System.out.println(String.format("%tY年 %tm月 %td日", c,c,c));
     System.out.println(String.format("%1$tH時 %1$tM分 %1$tS秒", c));
+    System.out.printf("%1$tH時 %1$tM分 %1$tS秒\n", c);
   }
 }

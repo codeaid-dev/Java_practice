@@ -6,6 +6,6 @@ public class Ex31 {
     int minutes = Integer.parseInt(t[1]);
     minutes += 5;
     hour += minutes/60;
-    System.out.println(hour+"時"+(minutes%60)+"分");
+    System.out.println(String.format("%02d時%02d分",hour,minutes%60));
   }
 }
