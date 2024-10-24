@@ -1,12 +1,9 @@
+import java.util.Scanner;
 public class Ex47 {
   public static void main(String[] args) {
-    String str = "東京,ニューヨーク,ロンドン,パリ,ローマ";
-    String[] towns1 = str.split(",");
-    String[] towns2 = new String[towns1.length];
-    System.arraycopy(towns1, 0, towns2, 0, towns1.length);
-    towns2[1] = "マドリード";
-    towns2[3] = "ベルリン";
-    System.out.println(java.util.Arrays.toString(towns1));
-    System.out.println(java.util.Arrays.toString(towns2));
+    String[] eto = {"子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥" };
+    System.out.print("西暦>>");
+    int year = new Scanner(System.in).nextInt();
+    System.out.println("西暦"+year+"年は、"+eto[(year+8)%eto.length]+"年です");
   }
 }
