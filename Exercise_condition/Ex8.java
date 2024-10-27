@@ -5,12 +5,21 @@ public class Ex8 {
     String left = "";
     String right = "";
     for (int i=0; i<s.length(); i++) {
-      String ch = String.valueOf(s.charAt(i));
+      char c = s.charAt(i);
+      
+      if (c == 'A') {
+        left += c;
+      } else if (c == 'B') {
+        right += c;
+      }
+      /*
+      String ch = String.valueOf(c);
       if (ch.equals("A")) {
         left += ch;
       } else if (ch.equals("B")) {
         right += ch;
       }
+      */
     }
     System.out.println(left+right);
   }
