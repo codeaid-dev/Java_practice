@@ -10,9 +10,9 @@ public class SortArrays {
     System.out.println(java.util.Arrays.toString(nums2));
     java.util.Arrays.sort(nums3);
     System.out.println(java.util.Arrays.toString(nums3));
-    java.util.Arrays.sort(nums3,java.util.Collections.reverseOrder());
+    java.util.Arrays.sort(nums3,java.util.Comparator.reverseOrder());
     System.out.println(java.util.Arrays.toString(nums3));
-    java.util.Arrays.sort(nums4,java.util.Collections.reverseOrder());
+    java.util.Arrays.sort(nums4,java.util.Comparator.reverseOrder());
     System.out.println(java.util.Arrays.toString(nums4));
   }
 }
