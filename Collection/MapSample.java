@@ -7,16 +7,16 @@ public class MapSample {
     for (int i=0; i<sweets.length; i++) {
       hashmap.put(i+1, sweets[i]);
     }
-    System.out.println("hashmap: "+hashmap.toString());
-    System.out.println("hashmap: "+hashmap.values().toString());
+    System.out.println("hashmap: "+hashmap);
+    System.out.println("hashmap values: "+hashmap.values());
     for (String val : hashmap.values()) {
       System.out.print(val + " ");
     }
     System.out.println("");
-    System.out.println("hashmap: "+hashmap.keySet().toString());
+    System.out.println("hashmap keys: "+hashmap.keySet());
     for (int key : hashmap.keySet()) {
-      System.out.print(key + ":" + hashmap.get(key)+"/");
+      System.out.println(key + ":" + hashmap.get(key));
     }
-    System.out.println("");
+    System.out.println("hashmap size: "+hashmap.size());
   }
 }
