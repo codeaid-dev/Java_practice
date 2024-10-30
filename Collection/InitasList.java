@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class InitasList {
   public static void main(String[] args) {
     ArrayList<Integer> arraylist1 = new ArrayList<>(Arrays.asList(1,2,3,4,5));
-    System.out.println("nums: "+arraylist1);
+    System.out.println("arraylist1: "+arraylist1);
     String[] colors = {"赤","青","黄","緑"};
     ArrayList<String> arraylist2 = new ArrayList<>(Arrays.asList(colors));
     System.out.println("arraylist2: "+arraylist2);
