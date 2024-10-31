@@ -4,7 +4,7 @@ import static java.util.Map.entry;
 
 public class Ex20 {
   public static void main(String[] args) {
-    Map<String,Double> week = new HashMap<>(Map.ofEntries(
+    HashMap<String,Double> week = new HashMap<>(Map.ofEntries(
       entry("日",0.0),
       entry("月",0.0),
       entry("火",0.0),

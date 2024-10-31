@@ -1,9 +1,8 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class Ex16 {
   public static void main(String[] args) {
-    Map<String,Integer> samp = new HashMap<>();
+    HashMap<String,Integer> samp = new HashMap<>();
     samp.put("hoge",250);
     samp.put("foo",300);
     samp.put("bar",120);

@@ -1,13 +1,11 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Ex40 {
   public static void main(String[] args) {
-    Map<String,List<Map<String,String>>> accounts = new HashMap<>();
-    List<Map<String,String>> contents = new ArrayList<>();
-    Map<String,String> items = new HashMap<>();
+    HashMap<String,ArrayList<HashMap<String,String>>> accounts = new HashMap<>();
+    ArrayList<HashMap<String,String>> contents = new ArrayList<>();
+    HashMap<String,String> items = new HashMap<>();
     items.put("mail","tanaka@example.com");
     items.put("name","田中");
     contents.add(items);
@@ -34,11 +32,11 @@ public class Ex40 {
     System.out.println(accounts.toString());
     System.out.print(">>");
     String s = new java.util.Scanner(System.in).nextLine();
-    List<String> res_class = new ArrayList<>();
+    ArrayList<String> res_class = new ArrayList<>();
     boolean output = false;
     for (String key : accounts.keySet()) {
-      List<Map<String,String>> list = accounts.get(key);
-      for (Map<String,String> map : list) {
+      ArrayList<HashMap<String,String>> list = accounts.get(key);
+      for (HashMap<String,String> map : list) {
         if (map.get("mail").equals(s)) {
           if (!output) {
             System.out.println("メールアドレス："+s);

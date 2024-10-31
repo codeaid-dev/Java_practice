@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Ex18 {
   public static void main(String[] args) {
-    Map<String,List<Map<String,String>>> member = new HashMap<>();
-    List<Map<String,String>> team = new ArrayList<>();
-    Map<String,String> info = new HashMap<>();
+    HashMap<String,List<HashMap<String,String>>> member = new HashMap<>();
+    ArrayList<HashMap<String,String>> team = new ArrayList<>();
+    HashMap<String,String> info = new HashMap<>();
     info.put("id","21001");
     info.put("name","鶴");
     info.put("temp","36.2,36.3,36.2,36.4,36.7");

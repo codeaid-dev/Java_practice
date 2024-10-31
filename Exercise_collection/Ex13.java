@@ -1,10 +1,9 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class Ex13 {
   public static void main(String[] args) {
-    Map<String,Map<String,String>> info = new HashMap<>();
-    Map<String,String> meal = new HashMap<>();
+    HashMap<String,HashMap<String,String>> info = new HashMap<>();
+    HashMap<String,String> meal = new HashMap<>();
     meal.put("朝食","食パンとコーヒー");
     meal.put("昼食","ハンバーガー");
     meal.put("夕食","ステーキ");

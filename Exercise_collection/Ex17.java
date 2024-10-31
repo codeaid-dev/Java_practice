@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class Ex17 {
   public static void main(String[] args) {
-    Map<List<Integer>,String> colors = new HashMap<>();
-    List<Integer> rgb = new ArrayList<>(Arrays.asList(255,0,0));
+    HashMap<ArrayList<Integer>,String> colors = new HashMap<>();
+    ArrayList<Integer> rgb = new ArrayList<>(Arrays.asList(255,0,0));
     colors.put(rgb,"red");
 //    rgb = new ArrayList<>(Arrays.asList(0,128,0));
     rgb = new ArrayList<>(List.of(0,128,0));

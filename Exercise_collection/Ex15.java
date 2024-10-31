@@ -1,10 +1,9 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class Ex15 {
   public static void main(String[] args) {
-    Map<String,Integer> menu1 = new HashMap<>();
-    Map<String,Integer> menu2 = new HashMap<>();
+    HashMap<String,Integer> menu1 = new HashMap<>();
+    HashMap<String,Integer> menu2 = new HashMap<>();
     menu1.put("coffee",250);
     menu1.put("sandwich",380);
     menu1.put("salad",180);

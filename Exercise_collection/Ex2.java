@@ -7,7 +7,7 @@ public class Ex2 {
     String[] green = {"green","#00FF00"};
     String[] blue = {"blue","#0000FF"};
     String[][] rgb = {red,green,blue};
-    Map<String, String> color = new HashMap<>();
+    HashMap<String, String> color = new HashMap<>();
     for (String[] iro : rgb) {
       color.put(iro[0], iro[1]);
     }
