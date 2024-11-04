@@ -1,9 +1,11 @@
-public class Car {
-  String type;
+//public class Car {
+public abstract class Car {
+    String type;
   public Car(String type) {
     this.type = type;
   }
-  public void run() {
-    System.out.println("ブッブー");
-  }
+  public abstract void run();
+//  public void run() {
+//    System.out.println("ブッブー");
+//  }
 }
