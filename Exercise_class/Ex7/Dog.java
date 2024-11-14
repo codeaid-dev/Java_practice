@@ -1,7 +1,10 @@
 public class Dog {
   private String name;
+  private int age = 0;
+  private static int dogCount = 0;
   public Dog(String name) {
     this.name = name;
+    dogCount++;
   }
   public void bark() {
     System.out.println("ワンワン");
@@ -17,12 +20,19 @@ public class Dog {
   public String getName() {
     return this.name;
   }
-  @Override
+  public void setAge(int age) {
+    this.age = age;
+  }
   public String toString() {
-    return "Dog{name='" + name + "'}";
+    return "Dog{name='" + name + "', age=" + age + "}";
+  }
+  public static int countDog() {
+    return dogCount;
   }
   public static void main(String[] args) {
-    Dog g = new Dog("Jiro");
-    System.out.println(g.toString());
+    Dog g1 = new Dog("Jiro");
+    Dog g2 = new Dog("Goro");
+    Dog g3 = new Dog("Taro");
+    System.out.println("犬は"+Dog.countDog()+"匹");
   }
 }

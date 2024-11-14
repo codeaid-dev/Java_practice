@@ -22,7 +22,5 @@ public class Dog {
     System.out.println(g.getName());
     g.setName("Goro");
     System.out.println(g.getName());
-//    g.bark(5);
-//    System.out.println("犬の名前は、"+g.name);
   }
 }

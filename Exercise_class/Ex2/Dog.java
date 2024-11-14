@@ -9,6 +9,5 @@ public class Dog {
   public static void main(String[] args) {
     Dog g = new Dog("Jiro");
     g.bark();
-//    System.out.println("犬の名前は、"+g.name);
   }
 }
