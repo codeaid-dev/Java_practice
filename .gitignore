@@ -1,7 +1,9 @@
 .vscode
 *.class
-output.txt
 Test.java
 Sample.java
 *.json
+output.txt
 /input.txt
+output.jpg
+/*.jpg
