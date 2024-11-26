@@ -1,9 +1,12 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Arrays;
 import java.util.HashSet;
 
 public class InitasList {
   public static void main(String[] args) {
+    List<String> list = Arrays.asList("A","B","C");
+    System.out.println("list: "+list);
     ArrayList<Integer> arraylist1 = new ArrayList<>(Arrays.asList(1,2,3,4,5));
     System.out.println("arraylist1: "+arraylist1);
     String[] colors = {"赤","青","黄","緑"};

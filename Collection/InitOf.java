@@ -7,6 +7,8 @@ import java.util.Set;
 
 public class InitOf {
   public static void main(String[] args) {
+    List<String> list = List.of("A","B","C");
+    System.out.println("list: "+list);
     ArrayList<Integer> arraylist = new ArrayList<>(List.of(1,2,3,4,5));
     System.out.println("arraylist: "+arraylist);
     String[] colors = {"赤","青","黄","緑"};
