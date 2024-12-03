@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -21,11 +22,15 @@ public class Ex7 {
                           datetime[4]);
     */
     LocalDateTime past = local.minusHours(5);
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分");
+    System.out.println("5時間前の日時: " + past.format(dtf));
+    /*
     System.out.println("5時間前の日時: " +
               past.getYear() + "年" +
               past.getMonthValue() + "月" +
-              past.getDayOfMonth() + "日" +
+              past.getDayOfMonth() + "日 " +
               past.getHour() + "時" +
               past.getMinute() + "分");
+    */
   }
 }
