@@ -10,10 +10,14 @@ public class StreamIOSample {
           new FileInputStream("image.jpg"));
           BufferedOutputStream writer = new BufferedOutputStream(
           new FileOutputStream("output.jpg"))) {
+      byte[] buffer = new byte[1024];
       int data;
-      while ((data = reader.read()) != -1) {
-        writer.write(data);
+      while ((data = reader.read(buffer)) != -1) {
+        writer.write(buffer, 0, data);
       }
+//      while ((data = reader.read()) != -1) {
+//        writer.write(data);
+//      }
     } catch (IOException e) {
       e.printStackTrace();
     }
