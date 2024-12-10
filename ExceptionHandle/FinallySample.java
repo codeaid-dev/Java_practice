@@ -8,7 +8,7 @@ public class FinallySample {
       System.out.println("Do finally block.");
     }
   }
-  public static void testException() throws IllegalArgumentException {
+  public static void testException() {
     throw new IllegalArgumentException("Test Exception");
   }
 }
