@@ -12,6 +12,7 @@ public class TextStreamIOSample {
             new FileOutputStream("output.txt"), "UTF-8")) {
       int data;
       while ((data = reader.read()) != -1) {
+        System.out.print((char)data);
         writer.write(data);
       }
     } catch (IOException e) {
