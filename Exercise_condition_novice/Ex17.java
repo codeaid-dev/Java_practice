@@ -1,4 +1,4 @@
-public class Ex26 {
+public class Ex17 {
   public static void main(String[] args) {
     int n=5;
     String star="";

@@ -1,4 +1,4 @@
-public class Ex27 {
+public class Ex18 {
   public static void main(String[] args) {
     for (int i=1; i<=10; i++) {
       int dice1 = new java.util.Random().nextInt(6)+1;
