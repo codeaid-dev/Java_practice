@@ -1,5 +1,3 @@
-package Exercise_condition_novice;
-
 public class Ex22 {
   public static void main(String[] args) {
     int pay = 10000;

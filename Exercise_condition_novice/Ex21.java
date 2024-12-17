@@ -1,5 +1,3 @@
-package Exercise_condition_novice;
-
 public class Ex21 {
   public static void main(String[] args) {
     int heads = 35;
