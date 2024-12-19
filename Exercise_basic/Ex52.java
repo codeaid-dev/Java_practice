@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Ex16 {
+public class Ex52 {
   public static void main(String[] args) {
     int[][] data1 = {{1, 2}, {3, 4}, {5, 6}};
     int[][] data2 = new int[data1[0].length][data1.length];

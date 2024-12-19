@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class Ex17 {
+public class Ex53 {
   public static void main(String[] args) {
     int[] data1 = {1, 2, 3, 4, 5, 6};
     int[] data2 = new int[data1.length];
