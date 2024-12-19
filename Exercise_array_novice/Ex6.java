@@ -1,17 +1,23 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ex6 {
   public static void main(String[] args) {
-    String[] team_1 = {"阪神","巨人","ヤクルト"};
-    String[] team_2 = {"DeNA","中日","広島"};
-    String[] central = new String[team_1.length + team_2.length];
-    for (int i = 0; i < central.length; i++) {
-      if (i < 3) {
-        central[i] = team_1[i];
-      } else {
-        central[i] = team_2[i - 3];
+    int[] data = new int[5];
+    for (int i = 0; i < data.length; i++) {
+      data[i] = new java.util.Random().nextInt(5)+1;
+    }
+    System.out.print("入力 >>");
+    int num = new Scanner(System.in).nextInt();
+    boolean found = false;
+    for (int n : data) {
+      if (n == num) {
+        found = true;
+        break;
       }
     }
-    System.out.println(Arrays.toString(central));
+    System.out.println(java.util.Arrays.toString(data));
+    if (found) System.out.println("含まれています");
+    else System.out.println("含まれていません");
+//    System.out.println(found ? "含まれています" : "含まれていません");
   }
 }

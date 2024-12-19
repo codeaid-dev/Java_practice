@@ -1,7 +1,13 @@
 public class Ex7 {
   public static void main(String[] args) {
-    int[][][] nums = {{{10}},{{20}},{{300},{400},{5000,6000},{500}},{{30}},{{40}}};
-    nums[2][2][0] = 0;
-    System.out.println(java.util.Arrays.deepToString(nums));
+    int[] data = {1, 2, 3, 4, 5};
+    int target = 6;
+    for (int i = 0; i < data.length; i++) {
+      for (int j = i + 1; j < data.length; j++) {
+        if (data[i] + data[j] == target) {
+          System.out.println("(" + data[i] + ", " + data[j] + ")");
+        }
+      }
+    }
   }
 }

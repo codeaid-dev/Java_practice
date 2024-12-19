@@ -1,19 +1,16 @@
-import java.util.Arrays;
-import java.util.Random;
-
 public class Ex15 {
   public static void main(String[] args) {
-    int[] data1 = {1, 2, 3, 4, 5, 6};
-    int[] data2 = new int[data1.length];
-    for (int num : data1) {
-      while (true) {
-        int n = new Random().nextInt(data1.length);
-        if (data2[n] == 0) {
-          data2[n] = num;
-          break;
-        }
+    char[] data = {'L', 'E', 'V', 'E', 'L'};
+    //char[] data = {'し', 'ん', 'ぶ', 'ん', 'し'};
+    boolean result = true;
+    for (int i = 0; i < data.length / 2; i++) {
+      if (data[i] != data[data.length - 1 - i]) {
+        result = false;
+        break;
       }
     }
-    System.out.println(Arrays.toString(data2));
+    if (result) System.out.println("回文です");
+    else System.out.println("回文ではありません");
+    //System.out.println(result ? "回文です" : "回文ではありません");
   }
 }

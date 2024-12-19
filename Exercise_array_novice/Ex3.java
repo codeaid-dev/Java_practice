@@ -1,11 +1,9 @@
 public class Ex3 {
   public static void main(String[] args) {
-    int[] data = {10, 20, 30, 40};
-    int sum = 0;
-    for (int num : data) {
-      sum += num;
+    int[] data = new int[5];
+    for (int i = 0; i < data.length; i++) {
+      data[i] = i*2+2;
     }
-    double average = (double) sum / data.length;
-    System.out.println("平均値：" + average);
+    System.out.println(java.util.Arrays.toString(data));
   }
 }

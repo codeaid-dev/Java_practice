@@ -1,16 +1,15 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Ex2 {
   public static void main(String[] args) {
-    int[] data = new int[5];
-    for (int i = 0; i < data.length; i++) {
-      data[i] = new java.util.Random().nextInt(15)+5;
+    System.out.print("要素の数 >>");
+    int len = new Scanner(System.in).nextInt();
+    int[] nums = new int[len];
+    for (int i=0; i<len; i++) {
+      System.out.print("要素の値(整数) >>");
+      nums[i] = new Scanner(System.in).nextInt();
     }
-    int max = data[0];
-    for (int n : data) {
-      if (n > max) {
-        max = n;
-      }
-    }
-    System.out.println(java.util.Arrays.toString(data));
-    System.out.println("最大値：" + max);
+    System.out.println(Arrays.toString(nums));
   }
 }

@@ -1,16 +1,10 @@
+import java.util.Scanner;
+
 public class Ex13 {
   public static void main(String[] args) {
-    char[] data = {'L', 'E', 'V', 'E', 'L'};
-    //char[] data = {'し', 'ん', 'ぶ', 'ん', 'し'};
-    boolean result = true;
-    for (int i = 0; i < data.length / 2; i++) {
-      if (data[i] != data[data.length - 1 - i]) {
-        result = false;
-        break;
-      }
-    }
-    if (result) System.out.println("回文です");
-    else System.out.println("回文ではありません");
-    //System.out.println(result ? "回文です" : "回文ではありません");
+    String[] weeks = {"月曜日","火曜日","水曜日","木曜日","金曜日","土曜日","日曜日"};
+    System.out.print("7月何日？");
+    int num = new Scanner(System.in).nextInt();
+    System.out.println(weeks[num % 7]);
   }
 }

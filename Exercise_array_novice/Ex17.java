@@ -1,23 +1,19 @@
+import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
-public class Ex17 {
+public class Ex15 {
   public static void main(String[] args) {
-    int wc = 0;
-    while (true) {
-      System.out.print("パスワード桁数：");
-      wc = new Scanner(System.in).nextInt();
-      if (wc < 4 || wc > 16) {
-        System.out.println("4~16までの桁数を入力してください");
-        continue;
-      } else break;
+    int[] data1 = {1, 2, 3, 4, 5, 6};
+    int[] data2 = new int[data1.length];
+    for (int num : data1) {
+      while (true) {
+        int n = new Random().nextInt(data1.length);
+        if (data2[n] == 0) {
+          data2[n] = num;
+          break;
+        }
+      }
     }
-    String[] ascii = {"a", "b", "c", "d", "E", "F", "G", "H", "0", "1", "2", "3", "4", "!", "@", "#", "$", "%"};
-    String result = "";
-    for (int i = 0; i < wc; i++) {
-      int index = new Random().nextInt(ascii.length);
-      result += ascii[index];
-    }
-    System.out.println("password: " + result);
+    System.out.println(Arrays.toString(data2));
   }
 }

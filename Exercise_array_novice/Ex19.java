@@ -1,29 +1,18 @@
-import java.util.Arrays;
-import java.util.Random;
-
 public class Ex19 {
   public static void main(String[] args) {
-    int[][] data = new int[13][4];
-    int number = 1;
-    for (int i = 0; i < data.length; i++) {
-      for (int j = 0; j < data[0].length; j++) {
-        data[i][j] = number;
-      }
-      number++;
-    }
-    System.out.println(Arrays.deepToString(data));
-    int[] cards = new int[5];
-    int index1 = 0;
-    while (index1 < 5) {
-      int index2 = new Random().nextInt(13);
-      int index3 = new Random().nextInt(4);
-      if (data[index2][index3] != 0) {
-        cards[index1] = data[index2][index3];
-        data[index2][index3] = 0;
-        index1++;
+    int months[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+    int days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int count = 0;
+
+    for (int i = 0; i < months.length; i++) {
+      for (int j = 1; j <= days[i]; j++) {
+        if (months[i] == (j / 10) + (j % 10)) {
+          count++;
+          //System.out.printf("%02d/%d%d\n", months[i], (j / 10), (j % 10));
+          System.out.println(months[i] + "/" + (j / 10) + (j % 10));
+        }
       }
     }
-//    System.out.println(Arrays.deepToString(data));
-    System.out.println(Arrays.toString(cards));
+    System.out.println("全部で" + count + "個");
   }
 }

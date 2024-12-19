@@ -1,15 +1,24 @@
-import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Ex18 {
   public static void main(String[] args) {
-    int[][] data = new int[13][4];
-    int number = 1;
-    for (int i = 0; i < data.length; i++) {
-      for (int j = 0; j < data[0].length; j++) {
-        data[i][j] = number;
+    String alphabet[] = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",};
+    int hide = new Random().nextInt(26);
+    String question = "";
+    for (int i=0; i<alphabet.length; i++) {
+      if (i != hide) {
+        question += alphabet[i];
       }
-      number++;
     }
-    System.out.println(Arrays.deepToString(data));
+    System.out.println(question);
+    System.out.print("抜けているアルファベットは？ ");
+    String answer = new Scanner(System.in).nextLine();
+    if (answer.equals(alphabet[hide])) {
+//    if (answer.equalsIgnoreCase(alphabet[hide])) {
+      System.out.println("正解！");
+    } else {
+      System.out.println("不正解：正解は「"+alphabet[hide]+"」");
+    }
   }
 }

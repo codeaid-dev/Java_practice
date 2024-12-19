@@ -1,14 +1,21 @@
-import java.util.Arrays;
-
 public class Ex14 {
   public static void main(String[] args) {
-    int[][] data1 = {{1, 2}, {3, 4}, {5, 6}};
-    int[][] data2 = new int[data1[0].length][data1.length];
-    for (int i = 0; i < data1.length; i++) {
-      for (int j = 0; j < data1[i].length; j++) {
-        data2[j][i] = data1[i][j];
+    String[] arrayA = {"秋田県","山形県","山口県","宮崎県","高知県"};
+    String[] arrayB = {"山口県","高知県","長崎県","北海道","石川県"};
+    String result = "";
+    for (int i = 0; i < arrayA.length; i++) {
+      boolean exist = false;
+      for (String s : arrayB) {
+        if (s.equals(arrayA[i])) {
+          exist = true;
+          break;
+        }
+      }
+      if (exist) {
+        result += "(" + arrayA[i] + ")";
       }
     }
-    System.out.println(Arrays.deepToString(data2));
+
+    System.out.println("2人とも行ったことのある場所：" + result);
   }
 }
