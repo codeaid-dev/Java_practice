@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Ex57 {
+public class Ex67 {
   public static void main(String[] args) {
     int wc = 0;
     while (true) {

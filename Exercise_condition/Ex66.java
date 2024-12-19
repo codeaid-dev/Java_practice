@@ -1,28 +1,25 @@
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
 
 public class Ex66 {
   public static void main(String[] args) {
-    System.out.print("入力 >>");
-    int num = new Scanner(System.in).nextInt();
-    String calc = "";
-    while (num != 1) {
-      int res = 0;
-      String str = String.valueOf(num);
-      String[] strs = str.split("");
-      for (String s : strs) {
-        res += (int)Math.pow(Double.parseDouble(s), 2);
-      }
-      if (calc.indexOf("<"+res+">") != -1) {
-        System.out.println("ラッキーナンバーではありません");
-        calc += "<"+res+">";
-        break;
-      }
-      num = res;
-      calc += "<"+res+">";
+    int[] data = new int[8];
+    for (int i = 0; i < data.length; i++) {
+      data[i] = new Random().nextInt(6)+1;
     }
-    if (num == 1) {
-      System.out.println("ラッキーナンバーです");
+    String result = "";
+    for (int n1 : data) {
+      int count = 0;
+      for (int n2 : data) {
+        if (n1 == n2) {
+          count++;
+          if (count > 1 && result.indexOf("(" + n1 + ")") == -1) {
+            result += "(" + n1 + ")";
+          }
+        }
+      }
     }
-    System.out.println(calc);
+    System.out.println(Arrays.toString(data));
+    System.out.println(result);
   }
 }

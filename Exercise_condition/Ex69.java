@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class Ex59 {
+public class Ex69 {
   public static void main(String[] args) {
     int[][] data = new int[13][4];
     int number = 1;

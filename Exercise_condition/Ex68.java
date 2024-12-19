@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Ex58 {
+public class Ex68 {
   public static void main(String[] args) {
     int[][] data = new int[13][4];
     int number = 1;

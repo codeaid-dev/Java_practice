@@ -1,21 +1,24 @@
-public class Ex56 {
+import java.util.Random;
+import java.util.Scanner;
+
+public class Ex54 {
   public static void main(String[] args) {
-    String[] alph = {"A","B","C","D","E","F","G","H","I","J"};
-    int ans = new java.util.Random().nextInt(alph.length);
-    String ques = "";
-    for (int i=0; i<alph.length; i++) {
-      if (i != ans) {
-        ques += alph[i];
+    String alphabet[] = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",};
+    int hide = new Random().nextInt(26);
+    String question = "";
+    for (int i=0; i<alphabet.length; i++) {
+      if (i != hide) {
+        question += alphabet[i];
       }
     }
-    System.out.println(ques);
-    System.out.print("抜けているアルファベットは？");
-    String s = new java.util.Scanner(System.in).nextLine();
-    s = s.toUpperCase();
-    if (s.equals(alph[ans])) {
-      System.out.println("正解です");
+    System.out.println(question);
+    System.out.print("抜けているアルファベットは？ ");
+    String answer = new Scanner(System.in).nextLine();
+    if (answer.equals(alphabet[hide])) {
+//    if (answer.equalsIgnoreCase(alphabet[hide])) {
+      System.out.println("正解！");
     } else {
-      System.out.println("間違いです");
+      System.out.println("不正解：正解は「"+alphabet[hide]+"」");
     }
   }
 }
