@@ -4,5 +4,6 @@ public class Ex20 {
     System.out.println(word.stripTrailing()+":");
     System.out.println(word.stripLeading()+":");
     System.out.println(word.strip()+":");
+//    System.out.println(word.trim()+":");
   }
 }
