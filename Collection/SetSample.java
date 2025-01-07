@@ -1,9 +1,10 @@
 import java.util.HashSet;
+import java.util.Set;
 
 public class SetSample {
   public static void main(String[] args) {
     String[] jsweets = {"大福", "団子", "まんじゅう", "おはぎ"};
-    HashSet<String> hashset = new HashSet<String>();
+    Set<String> hashset = new HashSet<String>();
     for (int i=0; i<jsweets.length; i++) {
       hashset.add(jsweets[i]);
     }

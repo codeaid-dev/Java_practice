@@ -1,9 +1,10 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class MapSample {
   public static void main(String[] args) {
     String[] sweets = {"ケーキ", "プリン", "アイス", "チョコレート"};
-    HashMap<Integer, String> hashmap = new HashMap<Integer, String>();
+    Map<Integer, String> hashmap = new HashMap<Integer, String>();
     for (int i=0; i<sweets.length; i++) {
       hashmap.put(i+1, sweets[i]);
     }

@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class Ex34 {
   public static void main(String[] args) {
-    HashMap<String,Set<String>> computers = new HashMap<>(
+    Map<String,Set<String>> computers = new HashMap<>(
       Map.of("PC1",Set.of("Intel","NVIDIA","Crucial"),
             "PC2",Set.of("Intel","RADEON","Corsair"),
             "PC3",Set.of("AMD","RADEON","Micron"),

@@ -1,8 +1,9 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListSample {
   public static void main(String[] args) {
-    ArrayList<String> arraylist = new ArrayList<String>();
+    List<String> arraylist = new ArrayList<String>();
     arraylist.add("桜");
     arraylist.add("ひまわり");
     arraylist.add("紅葉");
@@ -12,7 +13,7 @@ public class ListSample {
     System.out.println("arraylist size: "+arraylist.size());
     arraylist.set(1, "あさがお");
     System.out.println("arraylist: "+arraylist);
-    ArrayList<String> copylist = new ArrayList<String>(arraylist);
+    List<String> copylist = new ArrayList<String>(arraylist);
     System.out.println("copylist: "+copylist);
     arraylist.set(1, "ひまわり");
     System.out.println("arraylist: "+arraylist);
@@ -20,7 +21,7 @@ public class ListSample {
     arraylist.clear();
     System.out.println("arraylist: "+arraylist);
     System.out.println("arraylist size: "+arraylist.size());
-    ArrayList<Integer> nums = new ArrayList<Integer>();
+    List<Integer> nums = new ArrayList<Integer>();
     for (int i=0; i<5; i++) {
       nums.add((int)Math.ceil(Math.random()*10));
     }

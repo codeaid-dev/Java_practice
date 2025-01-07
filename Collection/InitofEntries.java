@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class InitofEntries {
   public static void main(String[] args) {
-    HashMap<Integer,String> hashmap = new HashMap<>(Map.ofEntries(
+    Map<Integer,String> hashmap = new HashMap<>(Map.ofEntries(
       entry(1, "a"),
       entry(2, "b"),
       entry(3, "c")));

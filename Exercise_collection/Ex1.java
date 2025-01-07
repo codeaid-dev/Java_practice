@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Ex1 {
   public static void main(String[] args) {
-    ArrayList<Integer> nums = new ArrayList<>(List.of(34,54,67,89,11,43,94));
+    List<Integer> nums = new ArrayList<>(List.of(34,54,67,89,11,43,94));
     Integer n = nums.get(4);
     nums.remove(4);
     System.out.println("INDEX4を削除："+nums.toString());
