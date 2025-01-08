@@ -3,24 +3,24 @@ import java.util.List;
 
 public class ListSample {
   public static void main(String[] args) {
-    List<String> arraylist = new ArrayList<String>();
-    arraylist.add("桜");
-    arraylist.add("ひまわり");
-    arraylist.add("紅葉");
-    System.out.println("arraylist: "+arraylist);
-    String str = arraylist.get(1);
-    System.out.println("arraylist[1]: "+str);
-    System.out.println("arraylist size: "+arraylist.size());
-    arraylist.set(1, "あさがお");
-    System.out.println("arraylist: "+arraylist);
-    List<String> copylist = new ArrayList<String>(arraylist);
+    List<String> list = new ArrayList<String>();
+    list.add("桜");
+    list.add("ひまわり");
+    list.add("紅葉");
+    System.out.println("list: "+list);
+    String str = list.get(1);
+    System.out.println("list[1]: "+str);
+    System.out.println("list size: "+list.size());
+    list.set(1, "あさがお");
+    System.out.println("list: "+list);
+    List<String> copylist = new ArrayList<String>(list);
     System.out.println("copylist: "+copylist);
-    arraylist.set(1, "ひまわり");
-    System.out.println("arraylist: "+arraylist);
+    list.set(1, "ひまわり");
+    System.out.println("list: "+list);
     System.out.println("copylist: "+copylist);
-    arraylist.clear();
-    System.out.println("arraylist: "+arraylist);
-    System.out.println("arraylist size: "+arraylist.size());
+    list.clear();
+    System.out.println("list: "+list);
+    System.out.println("list size: "+list.size());
     List<Integer> nums = new ArrayList<Integer>();
     for (int i=0; i<5; i++) {
       nums.add((int)Math.ceil(Math.random()*10));
