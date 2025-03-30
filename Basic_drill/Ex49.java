@@ -3,7 +3,7 @@ public class Ex49 {
     Integer[] nums = {56,102,83,7,25,110};
     java.util.Arrays.sort(nums);
     System.out.println(java.util.Arrays.toString(nums));
-    java.util.Arrays.sort(nums,java.util.Collections.reverseOrder());
+    java.util.Arrays.sort(nums,java.util.Comparator.reverseOrder());
     System.out.println(java.util.Arrays.toString(nums));
 
   }
