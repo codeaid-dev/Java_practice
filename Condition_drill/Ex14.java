@@ -1,8 +1,6 @@
 public class Ex14 {
   public static void main(String[] args) {
     int total=0,cnt=0,num=0;
-//    System.out.print("入力>>");
-//    int num = new java.util.Scanner(System.in).nextInt();
     do {
       System.out.print("入力>>");
       num = new java.util.Scanner(System.in).nextInt();

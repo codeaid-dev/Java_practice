@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex12 {
+public class Ex30 {
   public static void main(String[] args) {
     System.out.print(">> ");
     String str = new Scanner(System.in).nextLine();

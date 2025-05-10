@@ -1,11 +1,12 @@
-import java.util.Scanner;
-
 public class Ex25 {
   public static void main(String[] args) {
-    System.out.print("入力 >>");
-    int num = new Scanner(System.in).nextInt();
-    for (int i = 0; i < num; i++) {
-      System.out.print((i / 5) % 10);
+    int heads = 35;
+    int legs = 94;
+    for (int rabbits = 0; rabbits <= heads; rabbits++) {
+      int chikens = heads-rabbits;
+      if (2*chikens+4*rabbits == legs) {
+        System.out.println("兎は" + rabbits + "匹、鶏は" + chikens + "羽");
+      }
     }
   }
 }

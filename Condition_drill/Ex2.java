@@ -1,16 +1,15 @@
+import java.util.Scanner;
+
 public class Ex2 {
   public static void main(String[] args) {
-    System.out.print("年齢は？>>");
-    int age = new java.util.Scanner(System.in).nextInt();
-    if (age < 18) {
-      System.out.println("未成年");
-    } else {
-      if (age >= 65 && age < 75) {
-        System.out.println("前期高齢者");
-      } else if (age >= 75) {
-        System.out.println("後期高齢者");
-      } else {
-        System.out.println("成人");
+    int multiple = 0;
+    while (multiple < 2 || multiple > 15) {
+      System.out.print("指定倍数を入力：");
+      multiple = new Scanner(System.in).nextInt();
+    }
+    for (int i = 1; i <= 100; i++) {
+      if (i % multiple == 0) {
+        System.out.println(multiple + "の倍数：" + i);
       }
     }
   }

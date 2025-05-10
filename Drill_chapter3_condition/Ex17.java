@@ -1,19 +1,15 @@
 public class Ex17 {
   public static void main(String[] args) {
-    int n=5;
-    String star="";
-    for (int i=1; i<n; i++) {
-      for (int j=0; j<i; j++) {
-        star += "*";
+    int num = new java.util.Random().nextInt(20)+1;
+    String result = "";
+    for (int i=1; i<=20; i++) {
+      if (i > num/i) {
+        break;
       }
-      star += "\n";
-    }
-    for (int i=n; i>=0; i--) {
-      for (int j=0; j<i; j++) {
-        star += "*";
+      if (num%i == 0) {
+        result += i+"x"+(num/i)+"="+num+" ";
       }
-      star += "\n";
     }
-    System.out.print(star);
+    System.out.println(result);    
   }
 }

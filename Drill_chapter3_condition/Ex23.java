@@ -1,13 +1,13 @@
 public class Ex23 {
   public static void main(String[] args) {
-    int cnt = 0;
-    for (int i = 128; i <= 256; i++) {
-      if (i % 8 == 0) {
-        System.out.print(i + " ");
-        cnt++;
-      }
+    System.out.print("行数>>");
+    int n = new java.util.Scanner(System.in).nextInt();
+    for (int i=1; i<=n; i++) {
+        String result = "";
+        for (int col=1; col<=i; col++) {
+            result += col;
+        }
+        System.out.println(result);
     }
-    System.out.println("");
-    System.out.println("8の倍数は" + cnt + "個");
   }
 }

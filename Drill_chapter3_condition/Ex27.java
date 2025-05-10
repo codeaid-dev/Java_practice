@@ -1,28 +1,13 @@
-package Exercise_condition_novice;
-
-import java.util.Random;
-import java.util.Scanner;
-
 public class Ex27 {
   public static void main(String[] args) {
-    int com = new Random().nextInt(20) + 1;
-    int count = 0;
-    while (true) {
-      System.out.print("入力 >>");
-      int you = new Scanner(System.in).nextInt();
-      count++;
-      if (com > you) {
-        System.out.println("足りない");
-      } else if (com < you) {
-        System.out.println("多い");
-      } else {
-        System.out.println(count + "回目に当たり");
-        break;
-      }
-      if (count == 4) {
-        System.out.println("4回ハズレなので終了:正解は" + com);
-        break;
+    int cnt = 0;
+    for (int i = 128; i <= 256; i++) {
+      if (i % 8 == 0) {
+        System.out.print(i + " ");
+        cnt++;
       }
     }
+    System.out.println("");
+    System.out.println("8の倍数は" + cnt + "個");
   }
 }

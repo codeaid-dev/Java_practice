@@ -1,12 +1,19 @@
 public class Ex21 {
   public static void main(String[] args) {
-    int heads = 35;
-    int legs = 94;
-    for (int rabbits = 0; rabbits <= heads; rabbits++) {
-      int chikens = heads-rabbits;
-      if (2*chikens+4*rabbits == legs) {
-        System.out.println("兎は" + rabbits + "匹、鶏は" + chikens + "羽");
+    int n=5;
+    String star="";
+    for (int i=1; i<n; i++) {
+      for (int j=0; j<i; j++) {
+        star += "*";
       }
+      star += "\n";
     }
+    for (int i=n; i>=0; i--) {
+      for (int j=0; j<i; j++) {
+        star += "*";
+      }
+      star += "\n";
+    }
+    System.out.print(star);
   }
 }

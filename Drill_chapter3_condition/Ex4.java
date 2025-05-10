@@ -13,7 +13,7 @@ public class Ex4 {
     } else {
       if (age >= 65 && age < 75) {
         System.out.println("前期高齢者");
-      } else if (age >= 70) {
+      } else if (age >= 75) {
         System.out.println("後期高齢者");
       } else {
         System.out.println("成人");

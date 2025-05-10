@@ -1,11 +1,17 @@
 public class Ex22 {
   public static void main(String[] args) {
-    int pay = 10000;
-    int point = 0, month = 0;
-    while (point <= 20000) {
-      month += 1;
-      point += pay * 0.05;
+    for (int i=1; i<=10; i++) {
+      int dice1 = new java.util.Random().nextInt(6)+1;
+      int dice2 = new java.util.Random().nextInt(6)+1;
+      System.out.println(i+"回目："+dice1+","+dice2);
+      if (dice1 == dice2) {
+        if (dice1%2 == 0) {
+          System.out.println("大当たり");
+        } else {
+          System.out.println("当たり");
+        }
+        break;
+      }
     }
-    System.out.println("ポイント金額が20000円を超えるのは" + month + "ヶ月後");
   }
 }

@@ -1,15 +1,25 @@
+import java.util.Scanner;
+
 public class Ex13 {
   public static void main(String[] args) {
-    int num = new java.util.Random().nextInt(20)+1;
-    String result = "";
-    for (int i=1; i<=20; i++) {
-      if (i > num/i) {
-        break;
+    System.out.print("月を入力：");
+    int month = new Scanner(System.in).nextInt();
+    switch (month) {
+      case 3,4,5 -> {
+        System.out.println("春です");
       }
-      if (num%i == 0) {
-        result += i+"x"+(num/i)+"="+num+" ";
+      case 6,7,8 -> {
+        System.out.println("夏です");
+      }
+      case 9,10,11 -> {
+        System.out.println("秋です");
+      }
+      case 12,1,2 -> {
+        System.out.println("冬です");
+      }
+      default -> {
+        System.out.println("1〜12の数字を入力してください");
       }
     }
-    System.out.println(result);    
   }
 }

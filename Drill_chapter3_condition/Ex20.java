@@ -1,17 +1,16 @@
 public class Ex20 {
   public static void main(String[] args) {
-    System.out.print("入力 >>");
-    String s = new java.util.Scanner(System.in).nextLine();
-    int total=0;
-    for (int i=1; i<=3; i++) {
-      String work = "";
-      for (int j=0; j<i; j++) {
-        work += s;
+    System.out.print("行数 >>");
+    int row = new java.util.Scanner(System.in).nextInt();
+    System.out.print("列数 >>");
+    int col = new java.util.Scanner(System.in).nextInt();
+    String res = "";
+    for (int i = 0; i < row; i++) {
+      for (int j = 0; j < col; j++) {
+        res += "●";
       }
-      System.out.print(work + " ");
-      total += Integer.parseInt(work);
+      res += "\n";
     }
-    System.out.println("");
-    System.out.println(total);
+    System.out.print(res);
   }
 }

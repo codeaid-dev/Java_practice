@@ -1,17 +1,14 @@
 public class Ex18 {
   public static void main(String[] args) {
-    for (int i=1; i<=10; i++) {
-      int dice1 = new java.util.Random().nextInt(6)+1;
-      int dice2 = new java.util.Random().nextInt(6)+1;
-      System.out.println(i+"回目："+dice1+","+dice2);
-      if (dice1 == dice2) {
-        if (dice1%2 == 0) {
-          System.out.println("大当たり");
-        } else {
-          System.out.println("当たり");
-        }
-        break;
-      }
+    int uranai = new java.util.Random().nextInt(10);
+    if (uranai == 0) {
+      System.out.println("今日は最高");
+    } else if (uranai >= 1 && uranai <= 3) {
+      System.out.println("今日はそこそこ");
+    } else if (uranai >=4 && uranai <= 7) {
+      System.out.println("今日はまぁまぁ");
+    } else {
+      System.out.println("今日は最悪・・・");
     }
   }
 }

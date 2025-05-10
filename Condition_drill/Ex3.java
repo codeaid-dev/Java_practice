@@ -1,20 +1,24 @@
+import java.util.Scanner;
+
 public class Ex3 {
   public static void main(String[] args) {
-    System.out.print("年齢は？>>");
-    int age = new java.util.Scanner(System.in).nextInt();
-    if (age < 18) {
-      if (age >= 6 && age <= 15) {
-        System.out.println("未成年（義務教育の対象）");
-      } else {
-        System.out.println("未成年");
+    System.out.print("月を入力：");
+    int month = new Scanner(System.in).nextInt();
+    switch (month) {
+      case 3,4,5 -> {
+        System.out.println("春です");
       }
-    } else {
-      if (age >= 65 && age < 75) {
-        System.out.println("前期高齢者");
-      } else if (age >= 75) {
-        System.out.println("後期高齢者");
-      } else {
-        System.out.println("成人");
+      case 6,7,8 -> {
+        System.out.println("夏です");
+      }
+      case 9,10,11 -> {
+        System.out.println("秋です");
+      }
+      case 12,1,2 -> {
+        System.out.println("冬です");
+      }
+      default -> {
+        System.out.println("1〜12の数字を入力してください");
       }
     }
   }
