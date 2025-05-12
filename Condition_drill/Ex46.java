@@ -1,24 +1,19 @@
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Ex46 {
   public static void main(String[] args) {
-    int[] nums = {10,20,30,20,10,50,60,40,80,50,0,40};
-    List<String> res = new ArrayList<String>();
-    for (int n : nums) {
-      if (!res.contains(Integer.toString(n)) && n!=0) {
-        res.add(Integer.toString(n));
+    int n=5;
+    String star="";
+    for (int i=1; i<n; i++) {
+      for (int j=0; j<i; j++) {
+        star += "*";
       }
+      star += "\n";
     }
-    String res2 = String.join(" ",res);
-    System.out.println(res2);
-    String result = "";
-    for (int n : nums) {
-      if (result.indexOf(Integer.toString(n)) == -1 && n != 0) {
-        result += n+" ";
+    for (int i=n; i>=0; i--) {
+      for (int j=0; j<i; j++) {
+        star += "*";
       }
+      star += "\n";
     }
-    System.out.println(result);
+    System.out.print(star);
   }
 }

@@ -1,15 +1,12 @@
 public class Ex25 {
   public static void main(String[] args) {
-    System.out.print("行列数 >>");
-    String s = new java.util.Scanner(System.in).nextLine();
-    String[] rc = s.split(",");
-    String res = "";
-    for (int i=0; i<Integer.parseInt(rc[0]); i++) {
-      for (int j=0; j<Integer.parseInt(rc[1]); j++) {
-        res += "●";
+    String[] words = {"hello","eye","bye","noon"};
+    int count=0;
+    for (String s : words) {
+      if (s.charAt(0) == s.charAt(s.length()-1)) {
+        count++;
       }
-      res += "\n";
     }
-    System.out.print(res);
+    System.out.println(count);
   }
 }

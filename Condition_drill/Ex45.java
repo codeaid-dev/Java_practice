@@ -1,12 +1,15 @@
 public class Ex45 {
   public static void main(String[] args) {
-    String[] words = {"hello","eye","bye","noon"};
-    int count=0;
-    for (String s : words) {
-      if (s.charAt(0) == s.charAt(s.length()-1)) {
-        count++;
+    System.out.print("行列数 >>");
+    String s = new java.util.Scanner(System.in).nextLine();
+    String[] rc = s.split(",");
+    String res = "";
+    for (int i=0; i<Integer.parseInt(rc[0]); i++) {
+      for (int j=0; j<Integer.parseInt(rc[1]); j++) {
+        res += "●";
       }
+      res += "\n";
     }
-    System.out.println(count);
+    System.out.print(res);
   }
 }

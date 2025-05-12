@@ -1,12 +1,17 @@
 public class Ex47 {
   public static void main(String[] args) {
-    int[] nums = {1,4,3,5,6,2,7,8,3,4,6,8,9,1,2};
-    int count=0;
-    for (int num : nums) {
-      if (num >= 3 && num <= 6) {
-        count++;
+    for (int i=1; i<=10; i++) {
+      int dice1 = new java.util.Random().nextInt(6)+1;
+      int dice2 = new java.util.Random().nextInt(6)+1;
+      System.out.println(i+"回目："+dice1+","+dice2);
+      if (dice1 == dice2) {
+        if (dice1%2 == 0) {
+          System.out.println("大当たり");
+        } else {
+          System.out.println("当たり");
+        }
+        break;
       }
     }
-    System.out.println("3~6の数は"+count+"個");
   }
 }

@@ -1,18 +1,24 @@
 public class Ex49 {
   public static void main(String[] args) {
-    System.out.print("入力>>");
+    System.out.print(">>");
     String s = new java.util.Scanner(System.in).nextLine();
-    String[] words = s.split(",");
-    String shortest = "";
-    String longest = "";
-    for (String word : words) {
-      if (longest.length() <= word.length()) {
-        longest = word;
-      }
-      if (shortest.length() >= word.length() || shortest.length() == 0) {
-        shortest = word;
+    boolean flag = false;
+    String result = "";
+    for (int i=0; i<s.length(); i++) {
+      if (s.charAt(i) == '(') {
+          result += String.valueOf(s.charAt(i));
+          flag = true;
+          continue;
+      } if (s.charAt(i) == ')') {
+          result += String.valueOf(s.charAt(i));
+          flag = false;
+          continue;
+      } if (flag) {
+          result += "x";
+      } else {
+          result += String.valueOf(s.charAt(i));
       }
     }
-    System.out.println("最短："+shortest+"、最長："+longest);
+    System.out.println(result);
   }
 }
