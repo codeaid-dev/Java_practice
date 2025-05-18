@@ -1,15 +1,22 @@
-import java.util.Arrays;
-
-public class Ex68 {
+public class Ex68s {
   public static void main(String[] args) {
-    int[][] data = new int[13][4];
-    int number = 1;
-    for (int i = 0; i < data.length; i++) {
-      for (int j = 0; j < data[0].length; j++) {
-        data[i][j] = number;
-      }
-      number++;
+    int ele=0;
+    while (ele < 2 || ele > 5) {
+      System.out.print("問題数: ");
+      ele = new java.util.Scanner(System.in).nextInt();
     }
-    System.out.println(Arrays.deepToString(data));
+    for (int i = 0; i < ele; i++) {
+      int num1 = new java.util.Random().nextInt(9)+1;
+      int num2 = new java.util.Random().nextInt(9)+1;
+      int res = num1 + num2;
+      System.out.println(num1 + " + ? = " + res);
+      System.out.print("解答: ");
+      int answer = new java.util.Scanner(System.in).nextInt();
+      if (answer == num2) {
+        System.out.println("正解");
+      } else {
+        System.out.println("不正解(正解:" + num2 + ")");
+      }
+    }
   }
 }
