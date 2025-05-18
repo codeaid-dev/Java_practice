@@ -1,10 +1,16 @@
-import java.util.Scanner;
-
 public class Ex10 {
   public static void main(String[] args) {
-    String[] eto = {"子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥" };
-    System.out.print("西暦>>");
-    int year = new Scanner(System.in).nextInt();
-    System.out.println("西暦"+year+"年は、"+eto[(year+8)%eto.length]+"年です");
+    int[][] matrix = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    for (int i = 0; i < matrix.length; i++) {
+      int sum = 0;
+      for (int j = 0; j < matrix[i].length; j++) {
+        sum += matrix[i][j];
+      }
+      System.out.println((i+1) + "行目" + "の合計: " + sum);
+    }
   }
 }

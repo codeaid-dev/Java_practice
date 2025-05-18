@@ -1,19 +1,19 @@
 public class Ex21 {
   public static void main(String[] args) {
-    String left = "(^^*)";
-    String right = "(*^^)";
-    System.out.print("入力 >>");
-    String s = new java.util.Scanner(System.in).nextLine();
-    int lc=0, rc=0;
-    while (s.length() != 0) {
-      String word = s.substring(0, 5);
-      if (left.equals(word)) {
-        lc++;
-      } else if (right.equals(word)) {
-        rc++;
-      }
-      s = s.substring(5);
+    int[] nums = new int[10];
+    for (int i=0; i<nums.length; i++) {
+      nums[i] = new java.util.Random().nextInt(10);
     }
-    System.out.println("左向きは"+lc+"個、右向きは"+rc+"個");
+    System.out.println(java.util.Arrays.toString(nums));
+    int[] counts = new int[10];
+    for (int n : nums) {
+      counts[n]++;
+    }
+    System.out.println("重複している値:");
+    for (int i=0; i<counts.length; i++) {
+      if (counts[i] > 1) {
+        System.out.println(i + "は" + counts[i] + "回出現している");
+      }
+    }
   }
 }

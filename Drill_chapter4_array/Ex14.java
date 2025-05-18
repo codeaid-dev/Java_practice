@@ -1,21 +1,17 @@
+import java.util.Arrays;
+
 public class Ex14 {
   public static void main(String[] args) {
-    String[] arrayA = {"秋田県","山形県","山口県","宮崎県","高知県"};
-    String[] arrayB = {"山口県","高知県","長崎県","北海道","石川県"};
-    String result = "";
-    for (int i = 0; i < arrayA.length; i++) {
-      boolean exist = false;
-      for (String s : arrayB) {
-        if (s.equals(arrayA[i])) {
-          exist = true;
-          break;
-        }
-      }
-      if (exist) {
-        result += "(" + arrayA[i] + ")";
+    String[] team_1 = {"阪神","巨人","ヤクルト"};
+    String[] team_2 = {"DeNA","中日","広島"};
+    String[] central = new String[team_1.length + team_2.length];
+    for (int i = 0; i < central.length; i++) {
+      if (i < 3) {
+        central[i] = team_1[i];
+      } else {
+        central[i] = team_2[i - 3];
       }
     }
-
-    System.out.println("2人とも行ったことのある場所：" + result);
+    System.out.println(Arrays.toString(central));
   }
 }

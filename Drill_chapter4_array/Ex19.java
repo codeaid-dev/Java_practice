@@ -1,18 +1,10 @@
+import java.util.Scanner;
+
 public class Ex19 {
   public static void main(String[] args) {
-    int months[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-    int days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    int count = 0;
-
-    for (int i = 0; i < months.length; i++) {
-      for (int j = 1; j <= days[i]; j++) {
-        if (months[i] == (j / 10) + (j % 10)) {
-          count++;
-          //System.out.printf("%02d/%d%d\n", months[i], (j / 10), (j % 10));
-          System.out.println(months[i] + "/" + (j / 10) + (j % 10));
-        }
-      }
-    }
-    System.out.println("全部で" + count + "個");
+    String[] weeks = {"月曜日","火曜日","水曜日","木曜日","金曜日","土曜日","日曜日"};
+    System.out.print("7月何日？");
+    int num = new Scanner(System.in).nextInt();
+    System.out.println(weeks[num % 7]);
   }
 }

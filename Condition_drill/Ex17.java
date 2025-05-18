@@ -1,12 +1,26 @@
 public class Ex17 {
   public static void main(String[] args) {
-    int num = new java.util.Random().nextInt(20)+1;
-    String result = "";
-    for (int i=1; i<=20; i++) {
-      if (num%i == 0) {
-        result += i+"x"+(num/i)+"="+num+" ";
+    int[] nums = new int[7];
+    for (int i=0; i<nums.length; i++) {
+      nums[i] = new java.util.Random().nextInt(9)+1;
+    }
+    System.out.println(java.util.Arrays.toString(nums));
+    System.out.print("削除する値: ");
+    int del = new java.util.Scanner(System.in).nextInt();
+    int count = 0;
+    for (int n : nums) {
+      if (del == n) {
+        count++;
       }
     }
-    System.out.println(result);
+    int[] result = new int[nums.length - count];
+    int i = 0;
+    for (int n : nums) {
+      if (n != del) {
+        result[i] = n;
+        i++;
+      }
+    }
+    System.out.println(java.util.Arrays.toString(result));
   }
 }

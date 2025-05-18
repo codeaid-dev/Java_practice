@@ -1,19 +1,17 @@
 import java.util.Arrays;
-import java.util.Random;
 
 public class Ex17 {
   public static void main(String[] args) {
-    int[] data1 = {1, 2, 3, 4, 5, 6};
-    int[] data2 = new int[data1.length];
-    for (int num : data1) {
-      while (true) {
-        int n = new Random().nextInt(data1.length);
-        if (data2[n] == 0) {
-          data2[n] = num;
-          break;
-        }
+    int[] array1 = {3,6,9,12,15,18,21};
+    int[] array2 = {4,8,12,16,20,24,28};
+    int[] array3 = new int[7];
+    for (int i = 0; i < array3.length; i++) {
+      if (i % 2 == 1) {
+        array3[i] = array1[i];
+      } else {
+        array3[i] = array2[i];
       }
     }
-    System.out.println(Arrays.toString(data2));
+    System.out.println(Arrays.toString(array3));
   }
 }

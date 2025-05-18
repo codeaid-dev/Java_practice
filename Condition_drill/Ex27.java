@@ -1,12 +1,31 @@
 public class Ex27 {
   public static void main(String[] args) {
-    int[] nums = {1,4,3,5,6,2,7,8,3,4,6,8,9,1,2};
-    int count=0;
-    for (int num : nums) {
-      if (num >= 3 && num <= 6) {
-        count++;
+    int[][] matrix = {
+        {70, 80, 90},
+        {60, 75, 85},
+        {88, 92, 100}
+    };
+
+    String[] person = {"山田","田中","鈴木"};
+    String[] subject = {"国語","数学","英語"};
+    int[] sub_count = new int[subject.length];
+
+    for (int i = 0; i < matrix.length; i++) {
+      int sum = 0;
+      int count = 0;
+      for (int j = 0; j < matrix[i].length; j++) {
+          sum += matrix[i][j];
+          count++;
+          sub_count[j] += matrix[i][j];
       }
+      double average = (double) sum / count;
+      System.out.println(person[i]+"さんの合計点: " + sum);
+      System.out.println(person[i]+"さんの平均点: " + average);
     }
-    System.out.println("3~6の数は"+count+"個");
+    for (int i = 0; i < subject.length; i++) {
+      double avr = (double)sub_count[i] / matrix.length;
+      System.out.println(subject[i]+"の合計点: " + sub_count[i]);
+      System.out.println(subject[i]+"の平均点: " + avr);
+    }
   }
 }

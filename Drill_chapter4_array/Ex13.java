@@ -1,10 +1,13 @@
-import java.util.Scanner;
-
 public class Ex13 {
   public static void main(String[] args) {
-    String[] weeks = {"月曜日","火曜日","水曜日","木曜日","金曜日","土曜日","日曜日"};
-    System.out.print("7月何日？");
-    int num = new Scanner(System.in).nextInt();
-    System.out.println(weeks[num % 7]);
+    int[] data = {1, 2, 3, 4, 5};
+    int target = 6;
+    for (int i = 0; i < data.length; i++) {
+      for (int j = i + 1; j < data.length; j++) {
+        if (data[i] + data[j] == target) {
+          System.out.println("(" + data[i] + ", " + data[j] + ")");
+        }
+      }
+    }
   }
 }

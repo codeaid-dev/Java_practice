@@ -1,16 +1,16 @@
 public class Ex16 {
   public static void main(String[] args) {
-    System.out.print("入力>>");
-    String s1 = new java.util.Scanner(System.in).nextLine();
-    System.out.print("残す文字>>");
-    String s2 = new java.util.Scanner(System.in).nextLine();
-    String[] s3 = s1.split("");
-    String s4="";
-    for (String w : s3) {
-      if (s2.equals(w)) {
-        s4 += w;
+    int[] numbers = {10, 20, 30, 40, 50};
+    System.out.print("ローテート数: ");
+    int rotate = new java.util.Scanner(System.in).nextInt();
+    for (int r = 0; r < rotate; r++) {
+      int first = numbers[0];
+      for (int i = 1; i < numbers.length; i++) {
+        numbers[i - 1] = numbers[i];
       }
+      numbers[numbers.length - 1] = first;
     }
-    System.out.println(s4);
+
+    System.out.println("ローテートした配列: " + java.util.Arrays.toString(numbers));
   }
 }
