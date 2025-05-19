@@ -1,4 +1,4 @@
-public class Ex68s {
+public class Ex68 {
   public static void main(String[] args) {
     int ele=0;
     while (ele < 2 || ele > 5) {
