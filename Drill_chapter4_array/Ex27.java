@@ -1,23 +1,14 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Ex27 {
   public static void main(String[] args) {
-    int wc = 0;
-    while (true) {
-      System.out.print("パスワード桁数：");
-      wc = new Scanner(System.in).nextInt();
-      if (wc < 4 || wc > 16) {
-        System.out.println("4~16までの桁数を入力してください");
-        continue;
-      } else break;
+    System.out.print("入力>>");
+    String s = new java.util.Scanner(System.in).nextLine();
+    String[] nums = s.split(",");
+    int max=0;
+    for (String num : nums) {
+      if (max < Integer.parseInt(num)) {
+        max = Integer.parseInt(num);
+      }
     }
-    String[] ascii = {"a", "b", "c", "d", "E", "F", "G", "H", "0", "1", "2", "3", "4", "!", "@", "#", "$", "%"};
-    String result = "";
-    for (int i = 0; i < wc; i++) {
-      int index = new Random().nextInt(ascii.length);
-      result += ascii[index];
-    }
-    System.out.println("password: " + result);
+    System.out.println("最大値は"+max+"です");
   }
 }

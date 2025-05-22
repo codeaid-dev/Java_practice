@@ -1,25 +1,12 @@
-import java.util.Arrays;
-import java.util.Random;
-
 public class Ex26 {
   public static void main(String[] args) {
-    int[] data = new int[8];
-    for (int i = 0; i < data.length; i++) {
-      data[i] = new Random().nextInt(6)+1;
-    }
+    int[] nums = {10,20,30,20,10,50,60,40,80,50,0,40};
     String result = "";
-    for (int n1 : data) {
-      int count = 0;
-      for (int n2 : data) {
-        if (n1 == n2) {
-          count++;
-          if (count > 1 && result.indexOf("(" + n1 + ")") == -1) {
-            result += "(" + n1 + ")";
-          }
-        }
+    for (int n : nums) {
+      if (result.indexOf(Integer.toString(n)) == -1 && n != 0) {
+        result += n+" ";
       }
     }
-    System.out.println(Arrays.toString(data));
     System.out.println(result);
   }
 }

@@ -1,16 +1,16 @@
 public class Ex21 {
   public static void main(String[] args) {
-    char[] data = {'L', 'E', 'V', 'E', 'L'};
-    //char[] data = {'し', 'ん', 'ぶ', 'ん', 'し'};
-    boolean result = true;
-    for (int i = 0; i < data.length / 2; i++) {
-      if (data[i] != data[data.length - 1 - i]) {
-        result = false;
-        break;
+    int[] numbers = {10, 20, 30, 40, 50};
+    System.out.print("ローテート数: ");
+    int rotate = new java.util.Scanner(System.in).nextInt();
+    for (int r = 0; r < rotate; r++) {
+      int first = numbers[0];
+      for (int i = 1; i < numbers.length; i++) {
+        numbers[i - 1] = numbers[i];
       }
+      numbers[numbers.length - 1] = first;
     }
-    if (result) System.out.println("回文です");
-    else System.out.println("回文ではありません");
-    //System.out.println(result ? "回文です" : "回文ではありません");
+
+    System.out.println("ローテートした配列: " + java.util.Arrays.toString(numbers));
   }
 }

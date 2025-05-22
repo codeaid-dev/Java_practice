@@ -1,19 +1,15 @@
-import java.util.Arrays;
-import java.util.Random;
-
 public class Ex23 {
   public static void main(String[] args) {
-    int[] data1 = {1, 2, 3, 4, 5, 6};
-    int[] data2 = new int[data1.length];
-    for (int num : data1) {
-      while (true) {
-        int n = new Random().nextInt(data1.length);
-        if (data2[n] == 0) {
-          data2[n] = num;
-          break;
-        }
+    int[] listOne = {3,6,6,12,15,18,21};
+    int[] listTwo = {4,8,12,16,20,24,28};
+    int[] listThree = new int[7];
+    for (int i=0; i<listOne.length; i++) {
+      if (i%2==1) {
+        listThree[i] = listOne[i];
+      } else {
+        listThree[i] = listTwo[i];
       }
     }
-    System.out.println(Arrays.toString(data2));
+    System.out.println(java.util.Arrays.toString(listThree));
   }
 }

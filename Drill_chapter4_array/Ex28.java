@@ -1,15 +1,18 @@
-import java.util.Arrays;
-
 public class Ex28 {
   public static void main(String[] args) {
-    int[][] data = new int[13][4];
-    int number = 1;
-    for (int i = 0; i < data.length; i++) {
-      for (int j = 0; j < data[0].length; j++) {
-        data[i][j] = number;
+    System.out.print("入力>>");
+    String s = new java.util.Scanner(System.in).nextLine();
+    String[] words = s.split(",");
+    String shortest = "";
+    String longest = "";
+    for (String word : words) {
+      if (longest.length() <= word.length()) {
+        longest = word;
       }
-      number++;
+      if (shortest.length() >= word.length() || shortest.length() == 0) {
+        shortest = word;
+      }
     }
-    System.out.println(Arrays.deepToString(data));
+    System.out.println("最短："+shortest+"、最長："+longest);
   }
 }

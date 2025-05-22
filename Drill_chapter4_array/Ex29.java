@@ -1,29 +1,21 @@
-import java.util.Arrays;
-import java.util.Random;
-
 public class Ex29 {
   public static void main(String[] args) {
-    int[][] data = new int[13][4];
-    int number = 1;
-    for (int i = 0; i < data.length; i++) {
-      for (int j = 0; j < data[0].length; j++) {
-        data[i][j] = number;
+    String[] arrayA = {"秋田県","山形県","山口県","宮崎県","高知県"};
+    String[] arrayB = {"山口県","高知県","長崎県","北海道","石川県"};
+    String result = "";
+    for (int i = 0; i < arrayA.length; i++) {
+      boolean exist = false;
+      for (String s : arrayB) {
+        if (s.equals(arrayA[i])) {
+          exist = true;
+          break;
+        }
       }
-      number++;
-    }
-    System.out.println(Arrays.deepToString(data));
-    int[] cards = new int[5];
-    int index1 = 0;
-    while (index1 < 5) {
-      int index2 = new Random().nextInt(13);
-      int index3 = new Random().nextInt(4);
-      if (data[index2][index3] != 0) {
-        cards[index1] = data[index2][index3];
-        data[index2][index3] = 0;
-        index1++;
+      if (exist) {
+        result += "(" + arrayA[i] + ")";
       }
     }
-//    System.out.println(Arrays.deepToString(data));
-    System.out.println(Arrays.toString(cards));
+
+    System.out.println("2人とも行ったことのある場所：" + result);
   }
 }
