@@ -1,17 +1,15 @@
 public class Ex19 {
   public static void main(String[] args) {
-    System.out.println("結果：" + isAlphabet("I am Yamada."));
-    System.out.println("結果：" + isAlphabet("I am 山田."));
+    System.out.println("結果：" + countChar("hello world", 'l'));
+    System.out.println("結果：" + countChar("たけやぶやけた", 'け'));
   }
-  public static boolean isAlphabet(String str) {
+  public static int countChar(String str, char c) {
+    int count = 0;
     for (int i = 0; i < str.length(); i++) {
-      char c = str.charAt(i);
-      if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == ' ' || c == '.') {
-        continue;
-      } else {
-        return false;
+      if (str.charAt(i) == c) {
+        count++;
       }
     }
-    return true;
+    return count;
   }
 }

@@ -1,19 +1,19 @@
 public class Ex14 {
   public static void main(String[] args) {
-    System.out.println("結果：" + sumRange(2, 12));
-  }
-  public static int sumRange(int n) {
-    int result = 0;
-    for (int i = 1; i <= n; i++) {
-      result += i;
+    int[] nums1 = {1,2,3,4,5};
+    int[] nums2 = {1,2,3,4,5};
+    if (arraysEqual(nums1, nums2)) {
+      System.out.println("2つの配列の要素は同じです");
+    } else {
+      System.out.println("2つの配列の要素は違います");
     }
-    return result;
   }
-  public static int sumRange(int start, int end) {
-    int result = 0;
-    for (int i = start; i <= end; i++) {
-      result += i;
+  public static boolean arraysEqual(int[] data1, int[] data2) {
+    int count = 0;
+    for (int i = 0; i < data1.length; i++) {
+      if (data1[i] == data2[i]) count++;
     }
-    return result;
+    if (data1.length == count) return true;
+    else return false;
   }
 }

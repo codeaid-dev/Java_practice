@@ -1,19 +1,13 @@
-import java.util.Arrays;
-
 public class Ex15 {
   public static void main(String[] args) {
-//    int[] nums = {1, 2, 3, 4, 5};
-    int[] nums = {8, 12, 5, 27, 3, 15, 33, 45};
-    reverse(nums);
-    System.out.println("結果：" + Arrays.toString(nums));
+    System.out.print("秒を入力: ");
+    int input = new java.util.Scanner(System.in).nextInt();
+    System.out.println(formatTime(input));
   }
-  public static void reverse(int[] arr) {
-    int i = 0;
-    for (int j = arr.length-1; j >= arr.length/2; j--) {
-      int n = arr[i];
-      arr[i] = arr[j];
-      arr[j] = n;
-      i++;
-    }
+  public static String formatTime(int seconds) {
+    int hour = seconds / 3600;
+    int min = (seconds % 3600) / 60;
+    int sec = seconds % 60;
+    return String.format("%02d:%02d:%02d", hour, min, sec);
   }
 }

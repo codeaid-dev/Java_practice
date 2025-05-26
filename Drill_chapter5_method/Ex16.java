@@ -1,20 +1,22 @@
-import java.util.Arrays;
-
 public class Ex16 {
   public static void main(String[] args) {
-//    int[] nums = {1, 2, 3, 4, 5};
-    int[] nums = {8, 12, 5, 27, 3, 15, 33, 45};
-    int[] copied = reverse(nums);
-    System.out.println("元配列：" + Arrays.toString(nums));
-    System.out.println("結果：" + Arrays.toString(copied));
-  }
-  public static int[] reverse(int[] arr) {
-    int[] copy = new int[arr.length];
-    int i = 0;
-    for (int j = arr.length-1; j >= 0; j--) {
-      copy[i] = arr[j];
-      i++;
+    System.out.print("文字列を入力: ");
+    String str = new java.util.Scanner(System.in).nextLine();
+    if (isParindrome(str)) {
+      System.out.println("回文です");
+    } else {
+      System.out.println("回文ではありません");
     }
-    return copy;
+  }
+  public static boolean isParindrome(String str) {
+    int left_pos = 0;
+    int right_pos = str.length() - 1;
+    char[] words = str.toCharArray();
+    while (right_pos >= left_pos) {
+      if (words[left_pos] != words[right_pos]) return false;
+      left_pos += 1;
+      right_pos -= 1;
+    }
+    return true;
   }
 }
