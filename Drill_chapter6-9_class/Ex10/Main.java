@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import utilities.NumUtils;
 
-public class Ex10 {
+public class Main {
   public static void main(String[] args) {
     NumUtils nu = new NumUtils();
     System.out.print("整数入力 >>");

@@ -1,6 +1,6 @@
 import com.example.utils.Counter;
 
-public class Ex7 {
+public class Main {
   public static void main(String[] args) {
     Counter counter = new Counter();
     for (int i = 0; i < 10; i++) {

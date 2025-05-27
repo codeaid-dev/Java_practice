@@ -1,7 +1,7 @@
 import shapes.Rect;
 import shapes.Circle;
 
-public class Ex11 {
+public class Main {
   public static void main(String[] args) {
     Rect r = new Rect();
     Circle c = new Circle();

@@ -1,4 +1,4 @@
-public class Ex8 {
+public class Main {
   public static void main(String[] args) {
     Car car = new Car();
     car.fuel = 50;

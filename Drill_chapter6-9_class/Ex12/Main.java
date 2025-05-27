@@ -1,6 +1,6 @@
 import utilities.Dice;
 
-public class Ex12 {
+public class Main {
   public static void main(String[] args) {
     Dice dice = new Dice(1,10);
     int r = dice.roll();
