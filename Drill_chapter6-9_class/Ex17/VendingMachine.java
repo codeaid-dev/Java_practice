@@ -3,11 +3,11 @@ public class VendingMachine {
   int price;
   int stock;
   int money;
-  public VendingMachine(String name, int price, int stock) {
+  public VendingMachine(String name, int price, int stock, int money) {
     this.name = name;
     this.price = price;
     this.stock = stock;
-    this.money = 0;
+    this.money = money;
   }
   public VendingMachine(String name, int price) {
     this.name = name;
@@ -22,5 +22,23 @@ public class VendingMachine {
     System.out.println("価格：" + price + "円");
     System.out.println("在庫：" + stock);
     System.out.println("売上金額：" + money + "円");
+  }
+
+  public int buy(int payment) {
+    int change = 0;
+    if (stock > 0 && payment >= price) {
+      change = payment - price;
+      stock--;
+      money += price;
+      System.out.println(payment + "円で商品を購入しました");
+    } else {
+      System.out.println("購入できません");
+    }
+    return change;
+  }
+
+  public void addStock(int amount) {
+    stock += amount;
+    System.out.println(amount + "個の在庫を補充しました");
   }
 }
