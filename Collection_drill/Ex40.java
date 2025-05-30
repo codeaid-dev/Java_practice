@@ -1,58 +1,31 @@
 import java.util.ArrayList;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Scanner;
 
 public class Ex40 {
   public static void main(String[] args) {
-    Map<String,List<Map<String,String>>> accounts = new HashMap<>();
-    List<Map<String,String>> contents = new ArrayList<>();
-    Map<String,String> items = new HashMap<>();
-    items.put("mail","tanaka@example.com");
-    items.put("name","田中");
-    contents.add(items);
-    items = new HashMap<>();
-    items.put("mail","suzuki@example.com");
-    items.put("name","鈴木");
-    contents.add(items);
-    accounts.put("class1",contents);
-
-    contents = new ArrayList<>();
-    items = new HashMap<>();
-    items.put("mail","sato@example.com");
-    items.put("name","佐藤");
-    contents.add(items);
-    accounts.put("class2",contents);
-
-    contents = new ArrayList<>();
-    items = new HashMap<>();
-    items.put("mail","suzuki@example.com");
-    items.put("name","鈴木");
-    contents.add(items);
-    accounts.put("class3",contents);
-
-    System.out.println(accounts.toString());
-    System.out.print(">>");
-    String s = new java.util.Scanner(System.in).nextLine();
-    List<String> res_class = new ArrayList<>();
-    boolean output = false;
-    for (String key : accounts.keySet()) {
-      List<Map<String,String>> list = accounts.get(key);
-      for (Map<String,String> map : list) {
-        if (map.get("mail").equals(s)) {
-          if (!output) {
-            System.out.println("メールアドレス："+s);
-            System.out.println("名前："+map.get("name"));
-            output=true;
-          }
-          res_class.add(key);
-        }
+    int wc = 0;
+    while (true) {
+      System.out.print("パスワード桁数：");
+      wc = new Scanner(System.in).nextInt();
+      if (wc >= 8 && wc <= 32) {
+        break;
+      } else {
+        System.out.println("8~32までの桁数を入力してください");
       }
     }
-    if (!output) {
-      System.out.println("メールアドレス："+s);
-      System.out.println("名前：ありません");
+    int ascii_s = 33;
+    int ascii_e = 126;
+
+    ArrayList<String> password = new ArrayList<String>();
+    for (int i = 0; i < wc; i++) {
+      int index = new java.util.Random().nextInt(ascii_e-ascii_s)+ascii_s;
+      password.add(Character.toString((char)index));
     }
-    System.out.println("所属クラス："+res_class.toString());
+
+    String result = "";
+    for (String pass : password) {
+      result += pass;
+    }
+    System.out.println("password: " + result);
   }
 }

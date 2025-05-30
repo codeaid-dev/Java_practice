@@ -1,23 +1,17 @@
 public class Ex48 {
   public static void main(String[] args) {
-    System.out.print("はじめの情報>>");
-    String s = new java.util.Scanner(System.in).nextLine();
-    String[] ss = s.split(" ");
-    int N=Integer.parseInt(ss[0]);
-    int M=Integer.parseInt(ss[1]);
-    int L=Integer.parseInt(ss[2]);
-    int C=Integer.parseInt(ss[3]);
-    String out ="";
-    for (int i=0; i<N; i++) {
-      System.out.print((i+1)+"行目>>");
-      String pickup = new java.util.Scanner(System.in).nextLine();
-      String[] pickups = pickup.split(" ");
-      for (int j=0; j<M; j++) {
-        if (i == L-1 && j == C-1) {
-          out = pickups[j];
+    int months[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+    int days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int count = 0;
+
+    for (int i = 0; i < months.length; i++) {
+      for (int j = 1; j <= days[i]; j++) {
+        if (months[i] == (j / 10) + j % 10) {
+          count++;
+          System.out.printf("%02d/%d%d\n", months[i], (j / 10), (j % 10));
         }
       }
     }
-    System.out.println(L+"行"+C+"列目の整数："+out);
+    System.out.println("全部で" + Integer.toString(count) + "個");
   }
 }
