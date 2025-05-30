@@ -25,38 +25,5 @@ public class Ex40 {
     }
 //    System.out.println(Arrays.deepToString(data));
     System.out.println(Arrays.toString(cards));
-    int[] counts = new int[14]; // インデックス0は未使用
-    // 出現回数をカウント
-    //int[] nums = {2,3,3,3,2}; // for test
-    for (int num : cards) {
-      counts[num]++;
-    }
-    int four = 0;
-    int three = 0;
-    int pair = 0;
-    for (int count : counts) {
-      if (count == 4) {
-        four++;
-      } else if (count == 3) {
-        three++;
-      } else if (count == 2) {
-        pair++;
-      }
-    }
-
-    // 役の判定
-    if (four == 1) {
-        System.out.println("フォーカード");
-    } else if (three == 1 && pair == 1) {
-        System.out.println("フルハウス");
-    } else if (three == 1) {
-        System.out.println("スリーカード");
-    } else if (pair == 2) {
-        System.out.println("ツーペア");
-    } else if (pair == 1) {
-        System.out.println("ワンペア");
-    } else {
-        System.out.println("ノーハンド");
-    }
   }
 }
