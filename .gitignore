@@ -1,7 +1,7 @@
 .vscode
 *.class
-Test.java
-Sample.java
+Test*.*
+Sample*.*
 *.json
 output.txt
 /input.txt
