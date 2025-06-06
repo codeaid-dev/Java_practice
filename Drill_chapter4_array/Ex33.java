@@ -1,23 +1,18 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Ex33 {
   public static void main(String[] args) {
-    String alphabet[] = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-    int hide = new Random().nextInt(alphabet.length);
-    String question = "";
-    for (int i=0; i<alphabet.length; i++) {
-      if (i != hide) {
-        question += alphabet[i];
+    int months[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+    int days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int count = 0;
+
+    for (int i = 0; i < months.length; i++) {
+      for (int j = 1; j <= days[i]; j++) {
+        if (months[i] == (j / 10) + (j % 10)) {
+          count++;
+          //System.out.printf("%02d/%d%d\n", months[i], (j / 10), (j % 10));
+          System.out.println(months[i] + "/" + (j / 10) + (j % 10));
+        }
       }
     }
-    System.out.println(question);
-    System.out.print("抜けているアルファベットは？ ");
-    String answer = new Scanner(System.in).nextLine();
-    if (answer.equalsIgnoreCase(alphabet[hide])) {
-      System.out.println("正解！");
-    } else {
-      System.out.println("不正解：正解は「"+alphabet[hide]+"」");
-    }
+    System.out.println("全部で" + count + "個");
   }
 }

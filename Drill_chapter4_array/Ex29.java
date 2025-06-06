@@ -1,21 +1,16 @@
 public class Ex29 {
   public static void main(String[] args) {
-    String[] arrayA = {"秋田県","山形県","山口県","宮崎県","高知県"};
-    String[] arrayB = {"山口県","高知県","長崎県","北海道","石川県"};
-    String result = "";
-    for (int i = 0; i < arrayA.length; i++) {
-      boolean exist = false;
-      for (String s : arrayB) {
-        if (s.equals(arrayA[i])) {
-          exist = true;
-          break;
-        }
-      }
-      if (exist) {
-        result += "(" + arrayA[i] + ")";
+    char[] data = {'L', 'E', 'V', 'E', 'L'};
+    //char[] data = {'し', 'ん', 'ぶ', 'ん', 'し'};
+    boolean result = true;
+    for (int i = 0; i < data.length / 2; i++) {
+      if (data[i] != data[data.length - 1 - i]) {
+        result = false;
+        break;
       }
     }
-
-    System.out.println("2人とも行ったことのある場所：" + result);
+    if (result) System.out.println("回文です");
+    else System.out.println("回文ではありません");
+    //System.out.println(result ? "回文です" : "回文ではありません");
   }
 }

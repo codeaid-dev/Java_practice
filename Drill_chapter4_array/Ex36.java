@@ -1,23 +1,21 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Ex36 {
   public static void main(String[] args) {
-    int wc = 0;
-    while (true) {
-      System.out.print("パスワード桁数：");
-      wc = new Scanner(System.in).nextInt();
-      if (wc < 4 || wc > 16) {
-        System.out.println("4~16までの桁数を入力してください");
-        continue;
-      } else break;
+    int[] nums = new int[3];
+    for (int i = 0; i < nums.length; i++) {
+      int n = new java.util.Random().nextInt(9)+1;
+      nums[i] = n;
     }
-    String[] ascii = {"a", "b", "c", "d", "E", "F", "G", "H", "0", "1", "2", "3", "4", "!", "@", "#", "$", "%"};
-    String result = "";
-    for (int i = 0; i < wc; i++) {
-      int index = new Random().nextInt(ascii.length);
-      result += ascii[index];
+    System.out.print("数字を入力: ");
+    int in = new java.util.Scanner(System.in).nextInt();
+    boolean find = false;
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] == in) {
+        find = true;
+        break;
+      }
     }
-    System.out.println("password: " + result);
+    System.out.println(java.util.Arrays.toString(nums));
+    if (find) System.out.println("含まれています");
+    else System.out.println("含まれていません");
   }
 }

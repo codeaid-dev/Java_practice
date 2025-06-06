@@ -1,18 +1,21 @@
 public class Ex28 {
   public static void main(String[] args) {
-    System.out.print("入力>>");
-    String s = new java.util.Scanner(System.in).nextLine();
-    String[] words = s.split(",");
-    String shortest = "";
-    String longest = "";
-    for (String word : words) {
-      if (longest.length() <= word.length()) {
-        longest = word;
+    String[] arrayA = {"秋田県","山形県","山口県","宮崎県","高知県"};
+    String[] arrayB = {"山口県","高知県","長崎県","北海道","石川県"};
+    String result = "";
+    for (int i = 0; i < arrayA.length; i++) {
+      boolean exist = false;
+      for (String s : arrayB) {
+        if (s.equals(arrayA[i])) {
+          exist = true;
+          break;
+        }
       }
-      if (shortest.length() >= word.length() || shortest.length() == 0) {
-        shortest = word;
+      if (exist) {
+        result += "(" + arrayA[i] + ")";
       }
     }
-    System.out.println("最短："+shortest+"、最長："+longest);
+
+    System.out.println("2人とも行ったことのある場所：" + result);
   }
 }
