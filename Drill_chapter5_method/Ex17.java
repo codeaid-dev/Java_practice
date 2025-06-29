@@ -2,13 +2,20 @@ public class Ex17 {
   public static void main(String[] args) {
     System.out.print("文字列を入力: ");
     String word = new java.util.Scanner(System.in).nextLine();
-    System.out.println(reverseString(word));
+    String result = numString(word);
+    if (result.length() == 0) {
+      System.out.println("数字は含まれていません。");
+    } else {
+      System.out.println(result);
+    }
   }
-  public static String reverseString(String str) {
+  public static String numString(String str) {
     char[] letter = str.toCharArray();
     String result = "";
-    for (int i = letter.length-1; i >= 0; i--) {
-      result += letter[i];
+    for (char c : letter) {
+      if (Character.isDigit(c)) {
+        result += c;
+      }
     }
     return result;
   }
