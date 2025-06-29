@@ -7,6 +7,7 @@ public class Ex35 {
     while (true) {
       System.out.print("パスワード桁数：");
       wc = new Scanner(System.in).nextInt();
+//      wc = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
       if (wc < 4 || wc > 16) {
         System.out.println("4~16までの桁数を入力してください");
         continue;

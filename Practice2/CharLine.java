@@ -4,6 +4,7 @@ public class CharLine {
   public static void main(String[] args) {
     System.out.print("入力：");
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     String str = scan.nextLine();
 
     String[] nums = str.split(",");

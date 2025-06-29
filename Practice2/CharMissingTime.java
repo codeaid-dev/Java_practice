@@ -16,6 +16,7 @@ public class CharMissingTime {
     long start = System.currentTimeMillis();
 
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     String ans = scan.nextLine();
 
     long end = System.currentTimeMillis();

@@ -3,6 +3,7 @@ public class Ex62 {
     String[] place = {"アテネ","パリ","セントルイス","ロンドン","ストックホルム","ベルリン","アントワープ","パリ","アムステルダム","ロサンゼルス","ベルリン","ヘルシンキ","ロンドン","ロンドン","ヘルシンキ","メルボルン","ローマ","東京","メキシコシティ","ミュンヘン","モントリオール","モスクワ","ロサンゼルス","ソウル","バルセロナ","アトランタ","シドニー","アテネ","北京","ロンドン","リオデジャネイロ","東京","パリ"};
     System.out.print("開催年 >>");
     int year = new java.util.Scanner(System.in).nextInt();
+//    int year = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     int times = (year - 1896) / 4;
     if ((year - 1896) % 4 != 0) {
       times += 1;

@@ -13,6 +13,7 @@ public class CharMissing {
     System.out.println(str + "\n");
     System.out.print("抜けているのは？>");
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     String ans = scan.nextLine();
 
     if (ans.equalsIgnoreCase(alp[hide])) {

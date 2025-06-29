@@ -2,6 +2,7 @@ public class Ex15 {
   public static void main(String[] args) {
     System.out.print("金額 >>");
     int price = new java.util.Scanner(System.in).nextInt();
+//    int price = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     System.out.println("10000円札は"+price/10000+"枚");
     price -= price/10000*10000;
     System.out.println("5000円札は"+price/5000+"枚");

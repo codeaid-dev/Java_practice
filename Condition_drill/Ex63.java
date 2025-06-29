@@ -4,6 +4,7 @@ public class Ex63 {
     int[] date = {19,18,20,19,20,21,22,22,22,23,22,21};
     System.out.print("生まれた月日 >>");
     String s = new java.util.Scanner(System.in).nextLine();
+//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] birthday = s.split("/");
     int month = Integer.parseInt(birthday[0]);
     int day = Integer.parseInt(birthday[1]);

@@ -2,6 +2,7 @@ public class Practice12 {
   public static void main(String[] args) {
     System.out.print("2022年何月何日？ >>");
     String in = new java.util.Scanner(System.in).nextLine();
+//    String in = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] ymd = in.split(",");
     int month = Integer.parseInt(ymd[0]);
     int date = Integer.parseInt(ymd[1]);

@@ -12,8 +12,10 @@ public class JsonSample {
     //String script = "{\"Yamada\":\"abcde\"}";
     System.out.print("ユーザー名 >>");
     String username = new java.util.Scanner(System.in).nextLine();
+//    String username = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     System.out.print("パスワード >>");
     String password = new java.util.Scanner(System.in).nextLine();
+//    String password = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
 
     ObjectMapper mapper = new ObjectMapper();
     mapper.enable(SerializationFeature.INDENT_OUTPUT);

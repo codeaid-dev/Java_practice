@@ -3,6 +3,7 @@ public class InputDoller {
   public static void main(String[] args) {
     System.out.print("米ドルを入力>>");
     int doller = new Scanner(System.in).nextInt();
+//    int doller = new Scanner(System.in, "Shift-JIS").nextInt();
     System.out.println((doller*151.65)+"円");
   }
 }

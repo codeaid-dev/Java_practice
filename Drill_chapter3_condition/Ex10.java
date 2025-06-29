@@ -7,6 +7,7 @@ public class Ex10 {
     do {
       System.out.print(count + "回目：文字を入力(quitで終了)>");
       input = new Scanner(System.in).nextLine();
+//      input = new Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
       System.out.println(input);
       count++;
     } while (!input.equalsIgnoreCase("quit"));

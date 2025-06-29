@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class StoneGame {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     int max = 0;
     // 最初に取っていく石の数を入力する
     while (max < 10) {

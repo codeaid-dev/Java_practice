@@ -10,6 +10,7 @@ public class Ex31 {
     while (true) {
       System.out.print("入力 >>");
       int you = new Scanner(System.in).nextInt();
+//      int you = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
       count++;
       if (com > you) {
         System.out.println("足りない");

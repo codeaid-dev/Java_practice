@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Ex4 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
+//    Scanner scanner = new Scanner(System.in, "Shift-JIS"); //for Windows
     System.out.print("年を入力してください: ");
     int year = scanner.nextInt();
     System.out.print("月を入力してください: ");

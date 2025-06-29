@@ -4,6 +4,7 @@ public class Ex4 {
     String veg1="Carrot",veg2="Onion";
     System.out.print("どれですか？>>");
     String s = new java.util.Scanner(System.in).nextLine();
+//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     if (s.equals(frt1) || s.equals(frt2)) {
       System.out.println("フルーツです");
     } else if (s.equals(veg1) || s.equals(veg2)) {

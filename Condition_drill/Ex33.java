@@ -2,8 +2,10 @@ public class Ex33 {
   public static void main(String[] args) {
     System.out.print("文字列1>>");
     String s1 = new java.util.Scanner(System.in).nextLine();
+//    String s1 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     System.out.print("文字列2>>");
     String s2 = new java.util.Scanner(System.in).nextLine();
+//    String s2 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     boolean flag = false;
     for (int i=0; i<s1.length(); i++) {
       char c = s1.charAt(i);

@@ -2,9 +2,11 @@ public class Ex74 {
   public static void main(String[] args) {
     System.out.print("母親の遺伝子型 >>");
     String mom = new java.util.Scanner(System.in).nextLine().toUpperCase();
+//    String mom = new java.util.Scanner(System.in, "Shift-JIS").nextLine().toUpperCase(); //for Windows
     String[] moms = mom.split("");
     System.out.print("父親の遺伝子型 >>");
     String dad = new java.util.Scanner(System.in).nextLine().toUpperCase();
+//    String dad = new java.util.Scanner(System.in, "Shift-JIS").nextLine().toUpperCase(); //for Windows
     String[] dads = dad.split("");
     String[] child = new String[4];
     int i=0;

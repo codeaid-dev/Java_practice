@@ -34,6 +34,7 @@ public class Ex41 {
     System.out.println(accounts.toString());
     System.out.print(">>");
     String s = new java.util.Scanner(System.in).nextLine();
+//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     List<String> res_class = new ArrayList<>();
     boolean output = false;
     for (String key : accounts.keySet()) {

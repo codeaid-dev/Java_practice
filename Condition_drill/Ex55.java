@@ -5,6 +5,7 @@ public class Ex55 {
     for (int i=0; i<questions.length; i++) {
       System.out.print(questions[i]);
       String a = new java.util.Scanner(System.in).nextLine();
+//      String a = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
       if (answers[i].equals(a)) {
         System.out.println("正解です");
       } else {

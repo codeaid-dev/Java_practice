@@ -2,6 +2,7 @@ public class Ex8 {
   public static void main(String[] args) {
     System.out.print("入力>>");
     String s = new java.util.Scanner(System.in).nextLine();
+//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String left = "";
     String right = "";
     for (int i=0; i<s.length(); i++) {

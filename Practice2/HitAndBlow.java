@@ -20,6 +20,7 @@ public class HitAndBlow {
     }
 
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     while (true) {
       String num = "";
       ArrayList<Integer> nums = new ArrayList<Integer>();

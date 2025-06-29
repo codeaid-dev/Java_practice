@@ -4,6 +4,7 @@ public class Ex27 {
     System.out.println(java.util.Arrays.toString(nums));
     System.out.print("削除する要素: ");
     int rnum = new java.util.Scanner(System.in).nextInt();
+//    int rnum = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     int[] result = removeElement(nums, rnum);
     System.out.println(java.util.Arrays.toString(result));
   }

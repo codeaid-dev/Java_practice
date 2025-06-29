@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Mirror {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     String str = scan.nextLine();
     str = str.trim();
 

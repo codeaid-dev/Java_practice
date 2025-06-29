@@ -6,6 +6,7 @@ public class Ex2 {
     while (multiple < 2 || multiple > 15) {
       System.out.print("指定倍数を入力：");
       multiple = new Scanner(System.in).nextInt();
+//      multiple = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     }
     for (int i = 1; i <= 100; i++) {
       if (i % multiple == 0) {
