@@ -3,21 +3,17 @@ public class Ex17 {
     System.out.print("文字列を入力: ");
     String word = new java.util.Scanner(System.in).nextLine();
 //    String word = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
-    String result = numString(word);
-    if (result.length() == 0) {
-      System.out.println("数字は含まれていません。");
-    } else {
-      System.out.println(result);
-    }
+    int result = numTotalString(word);
+    System.out.println("合計："+result);
   }
-  public static String numString(String str) {
+  public static int numTotalString(String str) {
     char[] letter = str.toCharArray();
-    String result = "";
+    int total = 0;
     for (char c : letter) {
       if (Character.isDigit(c)) {
-        result += c;
+        total += Character.getNumericValue(c);
       }
     }
-    return result;
+    return total;
   }
 }
