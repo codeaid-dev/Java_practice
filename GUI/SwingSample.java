@@ -27,6 +27,7 @@ public class SwingSample extends JFrame {
     setVisible(true);
   }
   public static void main(String[] args) {
-    SwingUtilities.invokeLater(SwingSample::new);
+//    SwingUtilities.invokeLater(SwingSample::new);
+    new SwingSample();
   }
 }
