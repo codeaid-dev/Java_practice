@@ -6,6 +6,7 @@ public class Ex51 {
     }
     System.out.print("入力>>");
     int num = new java.util.Scanner(System.in).nextInt();
+//    int num = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     boolean exist=false;
     for (int n : nums) {
       if (n == num) {

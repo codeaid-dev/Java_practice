@@ -4,6 +4,7 @@ public class Ex7 {
     while (words.length() < 10) {
       System.out.print("半角英数字入力>>");
       words += new java.util.Scanner(System.in).nextLine();
+//      words += new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     }
     System.out.println(words.substring(0, 10));
   }

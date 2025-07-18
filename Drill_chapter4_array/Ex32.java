@@ -14,6 +14,7 @@ public class Ex32 {
     System.out.println(question);
     System.out.print("抜けているアルファベットは？ ");
     String answer = new Scanner(System.in).nextLine();
+//    String answer = new Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     if (answer.equalsIgnoreCase(alphabet[hide])) {
       System.out.println("正解！");
     } else {

@@ -4,6 +4,7 @@ public class Marubatsu {
   public static void main(String[] args) {
     System.out.print("横数と縦数：");
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     String str = scan.nextLine();
     String[] size = str.split(",", 0);
     int width = Integer.parseInt(size[0]);

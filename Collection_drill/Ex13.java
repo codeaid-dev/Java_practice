@@ -21,8 +21,10 @@ public class Ex13 {
     info.put("佐藤",meal);
     System.out.print("名前は？");
     String name = new java.util.Scanner(System.in).nextLine();
+//    String name = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     System.out.print("どの食事？");
     String eat = new java.util.Scanner(System.in).nextLine();
+//    String eat = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     System.out.println(name+"さんの"+eat+"は"+info.get(name).get(eat)+"です");
   }
 }

@@ -5,6 +5,7 @@ public class PasswordEx {
   public static void main(String[] args) {
     System.out.print("パスワード桁数：");
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     String str = scan.nextLine();
     str = str.trim();
     int wc = Integer.parseInt(str);

@@ -10,6 +10,7 @@ public class Bingo {
       //int num = scan.nextInt();
       //scan.close();
       int num = new java.util.Scanner(System.in).nextInt();
+//      int num = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
       if (ans == num) {
         System.out.println("アタリ！");
         break;

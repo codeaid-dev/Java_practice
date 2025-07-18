@@ -4,6 +4,7 @@ public class Ex68 {
     while (ele < 2 || ele > 5) {
       System.out.print("問題数: ");
       ele = new java.util.Scanner(System.in).nextInt();
+//      ele = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     }
     for (int i = 0; i < ele; i++) {
       int num1 = new java.util.Random().nextInt(9)+1;
@@ -12,6 +13,7 @@ public class Ex68 {
       System.out.println(num1 + " + ? = " + res);
       System.out.print("解答: ");
       int answer = new java.util.Scanner(System.in).nextInt();
+//      int answer = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
       if (answer == num2) {
         System.out.println("正解");
       } else {

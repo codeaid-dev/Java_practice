@@ -7,8 +7,10 @@ public class HashSample {
   public static void main(String[] args) {
     System.out.print("データ1：");
     String s1 = new java.util.Scanner(System.in).nextLine();
+//    String s1 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     System.out.print("データ2：");
     String s2 = new java.util.Scanner(System.in).nextLine();
+//    String s2 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
 
     String res1 = hash(s1+SALT);
     System.out.println(res1);

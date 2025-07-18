@@ -3,6 +3,7 @@ public class Ex69 {
     String[] week = {"日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日"};
     System.out.print("年月日 >>");
     String[] ymd = new java.util.Scanner(System.in).nextLine().split(",");
+//    String[] ymd = new java.util.Scanner(System.in, "Shift-JIS").nextLine().split(","); //for Windows
     int year = Integer.parseInt(ymd[0]);
     int month = Integer.parseInt(ymd[1]);
     int date = Integer.parseInt(ymd[2]);

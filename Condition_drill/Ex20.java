@@ -2,8 +2,10 @@ public class Ex20 {
   public static void main(String[] args) {
     System.out.print("入力 >>");
     String s1 = new java.util.Scanner(System.in).nextLine();
+//    String s1 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     System.out.print("数える文字列 >>");
     String s2 = new java.util.Scanner(System.in).nextLine();
+//    String s2 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] s1s = s1.split("");
     int count=0;
     for (String comp : s1s) {

@@ -2,6 +2,7 @@ public class Ex60 {
   public static void main(String[] args) {
     System.out.print("横幅と縦幅：");
     String s = new java.util.Scanner(System.in).nextLine();
+//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] ss = s.split(",");
     int yoko = Integer.parseInt(ss[0]);
     int tate = Integer.parseInt(ss[1]);

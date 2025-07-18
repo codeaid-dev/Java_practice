@@ -7,6 +7,7 @@ public class Ex40 {
     while (true) {
       System.out.print("パスワード桁数：");
       wc = new Scanner(System.in).nextInt();
+//      wc = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
       if (wc >= 8 && wc <= 32) {
         break;
       } else {

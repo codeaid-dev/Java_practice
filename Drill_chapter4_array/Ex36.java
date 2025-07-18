@@ -7,6 +7,7 @@ public class Ex36 {
     }
     System.out.print("数字を入力: ");
     int in = new java.util.Scanner(System.in).nextInt();
+//    int in = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     boolean find = false;
     for (int i = 0; i < nums.length; i++) {
       if (nums[i] == in) {

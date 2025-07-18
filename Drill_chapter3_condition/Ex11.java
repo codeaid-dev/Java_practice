@@ -6,6 +6,7 @@ public class Ex11 {
     while (num <= 0) {
       System.out.print("正の整数を入力してください：");
       num = new Scanner(System.in).nextInt();
+//      num = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     }
     int count = 0;
     int temp = num;

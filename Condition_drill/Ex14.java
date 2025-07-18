@@ -4,6 +4,7 @@ public class Ex14 {
     do {
       System.out.print("入力>>");
       num = new java.util.Scanner(System.in).nextInt();
+//      num = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
       total += num;
       if (num != 0) cnt++;
     } while (num != 0);

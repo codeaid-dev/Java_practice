@@ -7,6 +7,7 @@ public class Ex7 {
   public static void main(String[] args) {
     System.out.print("日時>>");
     String str = new Scanner(System.in).nextLine();
+//    String str = new Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] work = str.split(",");
     LocalDateTime local = LocalDateTime.of(Integer.parseInt(work[0]),
                           Integer.parseInt(work[1]),

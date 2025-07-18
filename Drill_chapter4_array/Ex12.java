@@ -8,6 +8,7 @@ public class Ex12 {
     }
     System.out.print("判定する値: ");
     int num = new Scanner(System.in).nextInt();
+//    int num = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     boolean found = false;
     for (int n : data) {
       if (n == num) {

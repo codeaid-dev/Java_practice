@@ -2,8 +2,10 @@ public class Ex35 {
   public static void main(String[] args) {
     System.out.print("入力>>");
     String s1 = new java.util.Scanner(System.in).nextLine();
+//    String s1 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     System.out.print("並び方>>");
     String[] s2 = new java.util.Scanner(System.in).nextLine().split("x");
+//    String[] s2 = new java.util.Scanner(System.in, "Shift-JIS").nextLine().split("x"); //for Windows
     int yoko = Integer.parseInt(s2[0]);
     int tate = Integer.parseInt(s2[1]);
     if (s1.length() >= yoko*tate) {

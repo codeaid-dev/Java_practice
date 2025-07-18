@@ -3,6 +3,7 @@ public class Ex21 {
     int[] numbers = {10, 20, 30, 40, 50};
     System.out.print("ローテート数: ");
     int rotate = new java.util.Scanner(System.in).nextInt();
+//    int rotate = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     for (int r = 0; r < rotate; r++) {
       int first = numbers[0];
       for (int i = 1; i < numbers.length; i++) {

@@ -9,6 +9,7 @@ public class Ex52 {
     }
     System.out.print("0~3を選択>>");
     int u = new java.util.Scanner(System.in).nextInt();
+//    int u = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     if (u >= 0 && u <= 3) {
       System.out.println(uranai[u]);
     } else {

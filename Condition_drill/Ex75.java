@@ -4,6 +4,7 @@ public class Ex75 {
   public static void main(String[] args) {
     System.out.print("入力 >>");
     int num = new Scanner(System.in).nextInt();
+//    int num = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     String calc = "";
     while (num != 1) {
       int res = 0;

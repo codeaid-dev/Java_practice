@@ -7,6 +7,7 @@ public class Ex17 {
     System.out.println(java.util.Arrays.toString(nums));
     System.out.print("削除する値: ");
     int del = new java.util.Scanner(System.in).nextInt();
+//    int del = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     int count = 0;
     for (int n : nums) {
       if (del == n) {

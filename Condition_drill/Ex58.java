@@ -2,6 +2,7 @@ public class Ex58 {
   public static void main(String[] args) {
     System.out.print("行と列>>");
     String s = new java.util.Scanner(System.in).nextLine();
+//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] nums = s.split(",");
     int row = Integer.parseInt(nums[0]);
     int col = Integer.parseInt(nums[1]);

@@ -7,6 +7,7 @@ public class Main {
     NumUtils nu = new NumUtils();
     System.out.print("整数入力 >>");
     int n = new Scanner(System.in).nextInt();
+//    int n = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     if (nu.isEven(n)) {
       System.out.println(n + "は偶数です");
     } else {

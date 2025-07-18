@@ -4,6 +4,7 @@ public class Uranai {
   public static void main(String[] args) {
     System.out.print("ENTER:占う　END:終了>");
     Scanner scan = new Scanner(System.in);
+//    Scanner scan = new Scanner(System.in, "Shift-JIS"); //for Windows
     String str = scan.nextLine();
 
     while (!str.equals("END")) {

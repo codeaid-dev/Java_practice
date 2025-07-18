@@ -2,14 +2,18 @@ public class Ex17 {
   public static void main(String[] args) {
     System.out.print("文字列を入力: ");
     String word = new java.util.Scanner(System.in).nextLine();
-    System.out.println(reverseString(word));
+//    String word = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
+    int result = numTotalString(word);
+    System.out.println("合計："+result);
   }
-  public static String reverseString(String str) {
+  public static int numTotalString(String str) {
     char[] letter = str.toCharArray();
-    String result = "";
-    for (int i = letter.length-1; i >= 0; i--) {
-      result += letter[i];
+    int total = 0;
+    for (char c : letter) {
+      if (Character.isDigit(c)) {
+        total += Character.getNumericValue(c);
+      }
     }
-    return result;
+    return total;
   }
 }

@@ -2,6 +2,7 @@ public class Practice4 {
   public static void main(String[] args) {
     System.out.print("年齢 >>");
     int age = new java.util.Scanner(System.in).nextInt();
+//    int age = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     if (age < 20) {
       if (age >= 1 && age <= 6) {
         System.out.println("幼児");

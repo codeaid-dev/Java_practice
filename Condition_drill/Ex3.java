@@ -4,6 +4,7 @@ public class Ex3 {
   public static void main(String[] args) {
     System.out.print("月を入力：");
     int month = new Scanner(System.in).nextInt();
+//    int month = new Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     switch (month) {
       case 3,4,5 -> {
         System.out.println("春です");

@@ -2,6 +2,7 @@ public class Ex15 {
   public static void main(String[] args) {
     System.out.print("秒を入力: ");
     int input = new java.util.Scanner(System.in).nextInt();
+//    int input = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
     System.out.println(formatTime(input));
   }
   public static String formatTime(int seconds) {
