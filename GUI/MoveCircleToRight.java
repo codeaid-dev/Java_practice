@@ -5,6 +5,7 @@ public class MoveCircleToRight extends JPanel {
   private int x = 0;
 
   public MoveCircleToRight() {
+    setPreferredSize(new Dimension(400, 150));
     Timer timer = new Timer(30, e -> {
       x += 5;
       if (x > getWidth()) x = 0;
@@ -23,8 +24,9 @@ public class MoveCircleToRight extends JPanel {
   public static void main(String[] args) {
     JFrame frame = new JFrame("円を右に動かす");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setSize(400, 150);
-    frame.add(new MoveCircleToRight());
+    frame.getContentPane().add(new MoveCircleToRight());
+    frame.pack();
+    frame.setLocationRelativeTo(null);
     frame.setVisible(true);
   }
 }

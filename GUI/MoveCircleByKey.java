@@ -6,6 +6,7 @@ public class MoveCircleByKey extends JPanel {
   int x = 100, y = 100;
 
   public MoveCircleByKey() {
+    setPreferredSize(new Dimension(400, 300));
     setFocusable(true);
     requestFocusInWindow();
 
@@ -30,10 +31,10 @@ public class MoveCircleByKey extends JPanel {
 
   public static void main(String[] args) {
     JFrame frame = new JFrame("矢印キーで円を動かす");
-    MoveCircleByKey panel = new MoveCircleByKey();
-    frame.add(panel);
-    frame.setSize(400, 300);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.getContentPane().add(new MoveCircleByKey());
+    frame.pack();
+    frame.setLocationRelativeTo(null);
     frame.setVisible(true);
   }
 }

@@ -7,6 +7,7 @@ public class MoveCircleByKeyEx extends JPanel {
   boolean up, down, left, right;
 
   public MoveCircleByKeyEx() {
+    setPreferredSize(new Dimension(400, 300));
     Timer timer = new Timer(16, e -> {
       if (up) y -= 10;
       if (down) y += 10;
@@ -48,10 +49,10 @@ public class MoveCircleByKeyEx extends JPanel {
 
   public static void main(String[] args) {
     JFrame frame = new JFrame("矢印キーで円をスムーズに動かす");
-    MoveCircleByKeyEx panel = new MoveCircleByKeyEx();
-    frame.add(panel);
-    frame.setSize(400, 300);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.getContentPane().add(new MoveCircleByKeyEx());
+    frame.pack();
+    frame.setLocationRelativeTo(null);
     frame.setVisible(true);
   }
 }

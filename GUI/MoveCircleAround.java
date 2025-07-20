@@ -8,6 +8,7 @@ public class MoveCircleAround extends JPanel {
   private int dy = 5;
 
   public MoveCircleAround() {
+    setPreferredSize(new Dimension(400, 300));
     Timer timer = new Timer(30, e -> {
       x += dx;
       y += dy;
@@ -30,8 +31,9 @@ public class MoveCircleAround extends JPanel {
   public static void main(String[] args) {
     JFrame frame = new JFrame("円をウロウロ動かす");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setSize(400, 300);
-    frame.add(new MoveCircleAround());
+    frame.getContentPane().add(new MoveCircleAround());
+    frame.pack();
+    frame.setLocationRelativeTo(null);
     frame.setVisible(true);
   }
 }
