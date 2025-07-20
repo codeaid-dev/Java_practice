@@ -15,7 +15,7 @@ public class Checkered extends JPanel {
         } else {
           g.setColor(Color.BLACK);
         }
-        g.fillRect(x*50, y*50, x*50+50, y*50+50);
+        g.fillRect(x*50, y*50, 50, 50);
       }
     }
   }
