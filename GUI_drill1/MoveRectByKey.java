@@ -2,17 +2,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MoveCircleByKeyEx extends JPanel {
-  int x = 100, y = 100;
+public class MoveRectByKey extends JPanel {
+  int x = 200, y = 200;
   boolean up, down, left, right;
 
-  public MoveCircleByKeyEx() {
-    setPreferredSize(new Dimension(400, 300));
+  public MoveRectByKey() {
+    setPreferredSize(new Dimension(500, 500));
     Timer timer = new Timer(16, e -> {
-      if (up) y -= 10;
-      if (down) y += 10;
-      if (left) x -= 10;
-      if (right) x += 10;
+      int move=10;
+      if (up) y -= move;
+      if (down) y += move;
+      if (left) x -= move;
+      if (right) x += move;
+      if (y < 0) y += move;
+      if (y+100 > 500) y -= move;
+      if (x < 0) x += move;
+      if (x+100 > 500) x -= move;
       repaint();
     });
     timer.start();
@@ -45,14 +50,14 @@ public class MoveCircleByKeyEx extends JPanel {
 
   protected void paintComponent(Graphics g) {
     super.paintComponent(g);
-    g.setColor(Color.RED);
-    g.fillOval(x, y, 30, 30);
+    g.setColor(Color.BLUE);
+    g.fillRect(x, y, 100, 100);
   }
 
   public static void main(String[] args) {
-    JFrame frame = new JFrame("矢印キーで円をスムーズに動かす");
+    JFrame frame = new JFrame("矢印キーで四角形を動かす");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.getContentPane().add(new MoveCircleByKeyEx());
+    frame.getContentPane().add(new MoveRectByKey());
     frame.pack();
     frame.setLocationRelativeTo(null);
     frame.setVisible(true);

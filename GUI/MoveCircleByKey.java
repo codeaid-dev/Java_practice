@@ -7,8 +7,10 @@ public class MoveCircleByKey extends JPanel {
 
   public MoveCircleByKey() {
     setPreferredSize(new Dimension(400, 300));
+    // キーイベントを受け取れるのは「フォーカスを持つコンポーネント」だけなので、
+    // フォーカスを受け取れるようにする
     setFocusable(true);
-    requestFocusInWindow();
+    requestFocusInWindow(); // 実際にこのパネルにキーボードフォーカスを要求する
 
     addKeyListener(new KeyAdapter() {
       public void keyPressed(KeyEvent e) {
