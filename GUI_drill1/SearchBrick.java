@@ -8,8 +8,10 @@ public class SearchBrick extends JPanel {
   int[] atari = {new Random().nextInt(10), new Random().nextInt(10)};
   boolean clear = false;
   int mx = -1, my = -1;
+  long start, spend;
   
   public SearchBrick() {
+    start = System.currentTimeMillis();
     System.out.println("x: "+atari[0]+" y: "+atari[1]);
     setPreferredSize(new Dimension(500, 500));
     addMouseListener(new MouseAdapter() {
@@ -29,12 +31,16 @@ public class SearchBrick extends JPanel {
         g.fillRect(x*50, y*50, 50, 50);
         g.setColor(Color.WHITE);
         g.drawRect(x*50, y*50, 50, 50);
-        if (mx == x && my == y && x == atari[0] && y == atari[1]) {
+        if (mx == x && my == y && x == atari[0] && y == atari[1] && !clear) {
           clear = true;
+          spend = System.currentTimeMillis() - start;
         }
         if (clear && x == atari[0] && y == atari[1]) {
           g.setColor(Color.RED);
           g.fillOval(x*50, y*50, 50, 50);
+          g.setFont(new Font("Sans-Serif", Font.BOLD, 30));
+          g.setColor(Color.BLACK);
+          g.drawString("経過時間："+spend/1000+"秒", 140, 230);
         }
       }
     }
