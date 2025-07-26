@@ -4,7 +4,7 @@ import java.awt.event.*;
 import java.util.Random;
 
 public class SearchBrick extends JPanel {
-  int[][] masu = new int[10][10];
+  // int[][] masu = new int[10][10];
   int[] atari = {new Random().nextInt(10), new Random().nextInt(10)};
   boolean clear = false;
   int mx = -1, my = -1;
