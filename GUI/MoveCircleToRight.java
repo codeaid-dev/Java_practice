@@ -6,7 +6,7 @@ public class MoveCircleToRight extends JPanel {
 
   public MoveCircleToRight() {
     setPreferredSize(new Dimension(400, 150));
-    Timer timer = new Timer(30, e -> {
+    Timer timer = new Timer(16, e -> { // 約60fps（1000ms / 60 ≒ 16）
       x += 5;
       if (x > getWidth()) x = 0;
       repaint();

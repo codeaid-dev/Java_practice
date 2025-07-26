@@ -4,12 +4,12 @@ import java.awt.*;
 public class MoveCircleAround extends JPanel {
   private int x = 0;
   private int y = 0;
-  private int dx = 4;
-  private int dy = 5;
+  private int dx = 2;
+  private int dy = 3;
 
   public MoveCircleAround() {
     setPreferredSize(new Dimension(400, 300));
-    Timer timer = new Timer(30, e -> {
+    Timer timer = new Timer(16, e -> {
       x += dx;
       y += dy;
       if (x > getWidth()-30 || x < 0)
