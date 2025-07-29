@@ -52,9 +52,9 @@ class Circle {
 
   public void move() {
     this.y += this.dy;
-    if (this.y > 500+this.size) {
+    if (this.y > 500) {
       reset();
-      this.y = 0 - this.size;
+      this.y = -this.size;
     }
   }
 
