@@ -7,6 +7,7 @@ public class FallCircles extends JPanel {
   private List<Circle> circles = new ArrayList<>();
 
   public FallCircles() {
+    setBackground(Color.WHITE);
     setPreferredSize(new Dimension(500, 500));
     for (int i = 0; i < 50; i++) {
       circles.add(new Circle());
