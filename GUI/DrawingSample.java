@@ -9,18 +9,18 @@ public class DrawingSample extends JPanel {
   protected void paintComponent(Graphics g) {
     super.paintComponent(g);
 
-    g.drawLine(10, 10, 100, 100); // 線を描く
-
-    g.drawRect(120, 20, 80, 50); // 四角を描く（塗りなし）
-
+    g.drawLine(10, 10, 100, 100); // 線
+    g.drawRect(120, 20, 80, 50); // 四角形(枠線)
     g.setColor(Color.RED);
-    g.fillRect(220, 20, 80, 50); // 四角を描く（塗りつぶす）
-
+    g.fillRect(220, 20, 80, 50); // 四角形(塗りつぶし)
     g.setColor(Color.BLUE);
-    g.fillOval(50, 150, 100, 100); // 円を描く（塗りつぶす）
-
+    g.fillOval(30, 150, 100, 100); // 円(塗りつぶし)
     g.setColor(Color.MAGENTA);
-    g.drawOval(170, 150, 100, 100); // 円を描く（塗りなし）
+    g.drawOval(150, 150, 100, 100); // 円(枠線)
+    g.setColor(Color.YELLOW);
+    g.fillArc(270, 150, 100, 100, 30, 300); // 円弧(塗りつぶし)
+    g.setColor(Color.CYAN);
+    g.drawArc(270, 270, 100, 100, 30, 300); // 弧(線)
 
     // テキスト描画（フォントと色も指定）
     g.setFont(new Font("Serif", Font.BOLD, 20));
