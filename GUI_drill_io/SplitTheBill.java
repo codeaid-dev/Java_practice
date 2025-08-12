@@ -13,26 +13,26 @@ public class SplitTheBill extends JFrame {
     gbc.insets = new Insets(5, 5, 5, 5);
     gbc.gridx = 0; gbc.gridy = 0;
     JLabel label1 = new JLabel("支払総額:");
-    label1.setFont(new Font("sans-serif", Font.PLAIN, 20));
+    label1.setFont(new Font("SansSerif", Font.PLAIN, 20));
     panel1.add(label1, gbc);
     gbc.gridx = 1; gbc.gridy = 0;
     JTextField text1 = new JTextField(10);
-    text1.setFont(new Font("sans-serif", Font.PLAIN, 20));
+    text1.setFont(new Font("SansSerif", Font.PLAIN, 20));
     panel1.add(text1, gbc);
 
     gbc.gridx = 0; gbc.gridy = 1;
     JLabel label2 = new JLabel("人数:");
-    label2.setFont(new Font("sans-serif", Font.PLAIN, 20));
+    label2.setFont(new Font("SansSerif", Font.PLAIN, 20));
     panel1.add(label2, gbc);
     gbc.gridx = 1; gbc.gridy = 1;
     JTextField text2 = new JTextField(10);
-    text2.setFont(new Font("sans-serif", Font.PLAIN, 20));
+    text2.setFont(new Font("SansSerif", Font.PLAIN, 20));
     panel1.add(text2, gbc);
 
     // --- 端数処理選択 ---
     JPanel panel2 = new JPanel();
     JLabel label3 = new JLabel("端数処理");
-    label3.setFont(new Font("sans-serif", Font.PLAIN, 20));
+    label3.setFont(new Font("SansSerif", Font.PLAIN, 20));
     panel2.add(label3);
 
     JPanel panel3 = new JPanel();
@@ -47,10 +47,10 @@ public class SplitTheBill extends JFrame {
     // --- 計算ボタン ---
     JPanel panel4 = new JPanel();
     JButton calc = new JButton("計算");
-    calc.setFont(new Font("sans-serif", Font.PLAIN, 20));
+    calc.setFont(new Font("SansSerif", Font.PLAIN, 20));
     panel4.add(calc);
 
-    // --- 総支払額・人数の入力 ---
+    // --- 結果の表示 ---
     JPanel panel5 = new JPanel(new GridBagLayout());
     gbc = new GridBagConstraints();
     gbc.insets = new Insets(5, 5, 5, 5);
@@ -90,7 +90,6 @@ public class SplitTheBill extends JFrame {
 
     setLayout(new GridBagLayout());
     gbc = new GridBagConstraints();
-    gbc.insets = new Insets(1, 1, 1, 1);
     gbc.gridx = 0; gbc.gridy = 0;
     add(panel1, gbc);
     gbc.gridx = 0; gbc.gridy = 1;
