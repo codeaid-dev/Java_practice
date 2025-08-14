@@ -10,6 +10,7 @@ public class AspectRatio extends JFrame {
     GridBagConstraints gbc = new GridBagConstraints();
     gbc.insets = new Insets(5, 5, 5, 5);
 
+    // --- 幅の入力 ---
     JPanel panel1 = new JPanel();
     JLabel widthLabel = new JLabel("幅: ");
     widthLabel.setFont(new Font("SansSerif", Font.PLAIN, 20));
@@ -18,6 +19,7 @@ public class AspectRatio extends JFrame {
     panel1.add(widthLabel);
     panel1.add(widthField);
 
+    // --- 高さの入力 ---
     JPanel panel2 = new JPanel();
     JLabel heightLabel = new JLabel("高さ: ");
     heightLabel.setFont(new Font("SansSerif", Font.PLAIN, 20));
@@ -29,6 +31,7 @@ public class AspectRatio extends JFrame {
     JButton showButton = new JButton("計算");
     showButton.setFont(new Font("SansSerif", Font.PLAIN, 20));
 
+    // --- 結果の表示 ---
     JLabel resultLabel = new JLabel("ここに結果を表示");
     resultLabel.setFont(new Font("SansSerif", Font.PLAIN, 20));
 

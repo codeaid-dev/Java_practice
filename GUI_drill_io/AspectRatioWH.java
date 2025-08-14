@@ -11,6 +11,7 @@ public class AspectRatioWH extends JFrame {
     GridBagConstraints gbc = new GridBagConstraints();
     gbc.insets = new Insets(5, 5, 5, 5);
 
+    // --- アスペクト比の入力 ---
     JPanel panel1 = new JPanel();
     JLabel aspectLabel = new JLabel("アスペクト比: ");
     aspectLabel.setFont(new Font("SansSerif", Font.PLAIN, 20));
@@ -19,6 +20,7 @@ public class AspectRatioWH extends JFrame {
     panel1.add(aspectLabel);
     panel1.add(aspectField);
 
+    // --- 幅もしくは高さの選択と入力 ---
     JPanel panel2 = new JPanel();
     JRadioButton radio1 = new JRadioButton("幅: ", true);
     radio1.setFont(new Font("SansSerif", Font.PLAIN, 20));
@@ -52,6 +54,7 @@ public class AspectRatioWH extends JFrame {
     JButton showButton = new JButton("計算");
     showButton.setFont(new Font("SansSerif", Font.PLAIN, 20));
 
+    // --- エラーの表示 ---
     JLabel errorLabel = new JLabel();
     errorLabel.setFont(new Font("SansSerif", Font.PLAIN, 20));
     errorLabel.setForeground(Color.RED);
