@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class MultiEvent {
+  static Timer timer;
+
   public static void main(String[] args) {
     JFrame frame = new JFrame("複数イベント");
     JButton start = new JButton("スタート");
@@ -18,14 +20,13 @@ public class MultiEvent {
     frame.setVisible(true);
 
     int delay = 1000;
-    Timer[] timer = new Timer[1];
     ActionListener drum = new ActionListener() {
       int count = 0;
       public void actionPerformed (ActionEvent evt) {
         if (evt.getSource() == start) {
           label2.setText("ボタンが押された");
           count = 0;
-          timer[0].start();
+          timer.start();
         } else {
           count++;
           label2.setText(""+count);
@@ -33,7 +34,7 @@ public class MultiEvent {
 
       }
     };
-    timer[0] = new Timer(delay, drum);
+    timer = new Timer(delay, drum);
     start.addActionListener(drum);
   }
 }
