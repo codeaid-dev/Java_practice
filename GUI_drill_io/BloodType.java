@@ -9,7 +9,7 @@ public class BloodType extends JFrame {
   public BloodType() {
     setTitle("血液型");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setSize(600, 300);
+    setSize(600, 200);
     setLayout(new GridBagLayout());
     GridBagConstraints gbc = new GridBagConstraints();
     gbc.insets = new Insets(5, 5, 5, 5);
