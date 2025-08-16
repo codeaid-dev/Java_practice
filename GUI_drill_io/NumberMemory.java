@@ -62,7 +62,7 @@ public class NumberMemory extends JFrame {
         timer.start();
       } else {
         resultLabel.setForeground(Color.RED);
-        resultLabel.setText("間違い！(正解："+number+")あなたのレベル："+level);
+        resultLabel.setText("間違い！(正解："+number+")あなたのレベル："+(level-1));
         timer.stop();
       }
     });
