@@ -17,13 +17,13 @@ public class CheckboxSample extends JFrame {
     JCheckBox check3 = new JCheckBox("C++");
 
     // チェックボックスのイベント
-    ItemListener checkListener = (new ItemListener() {
+    ItemListener checkListener = new ItemListener() {
       public void itemStateChanged(ItemEvent e) {
         JCheckBox cb = (JCheckBox) e.getSource();
         // System.out.println(cb.getText() + " : " + (cb.isSelected() ? "選択" : "解除"));
         resultLabel.setText(cb.getText() + " : " + (cb.isSelected() ? "選択" : "解除"));
       }
-    });
+    };
     // ItemListener checkListener = e -> {
     //   JCheckBox cb = (JCheckBox) e.getSource();
     //   // System.out.println(cb.getText() + " : " + (cb.isSelected() ? "選択" : "解除"));
