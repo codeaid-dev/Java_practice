@@ -3,12 +3,12 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class SlotMoji {
+  static Timer timer;
   public static void main(String[] args) {
     JFrame frame = new JFrame("スロットマシン");
     JLabel slot[] = new JLabel[3];
     JButton btn[] = new JButton[3];
     JButton start = new JButton("スタート");
-    Timer timer[] = new Timer[1];
     boolean[] status = {true, true, true};
 
     JLabel label1 = new JLabel("スタートを押して始めてください", JLabel.CENTER);
@@ -33,7 +33,7 @@ public class SlotMoji {
     ActionListener drum = new ActionListener() {
       public void actionPerformed (ActionEvent evt) {
         if (evt.getSource() == start) {
-          timer[0].start();
+          timer.start();
           for (int i=0; i < status.length; i++) {
             status[i] = false;
           }
@@ -52,7 +52,7 @@ public class SlotMoji {
         }
       }
     };
-    timer[0] = new Timer(delay, drum);
+    timer = new Timer(delay, drum);
     start.addActionListener(drum);
     JPanel panel2 = new JPanel();
     panel2.add(start);

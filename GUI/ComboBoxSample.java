@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ComboBoxSample extends JFrame {
   public ComboBoxSample() {
@@ -14,6 +16,13 @@ public class ComboBoxSample extends JFrame {
     String[] items = {"東京", "大阪", "福岡", "札幌"};
     JComboBox<String> combo = new JComboBox<>(items);
 
+    // combo.addActionListener(new ActionListener() {
+    //   public void actionPerformed(ActionEvent e) {
+    //     String selected = (String) combo.getSelectedItem();
+    //     // System.out.println("選択された都市: " + selected);
+    //     resultLabel.setText("選択された都市: " + selected);
+    //   }
+    // });
     combo.addActionListener(e -> {
       String selected = (String) combo.getSelectedItem();
       // System.out.println("選択された都市: " + selected);

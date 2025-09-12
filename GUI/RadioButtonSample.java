@@ -23,13 +23,13 @@ public class RadioButtonSample extends JFrame {
     group.add(radio3);
 
     // ラジオボタンのイベント
-    // ActionListener radioListener = (new ActionListener() {
+    // ActionListener radioListener = new ActionListener() {
     //   public void actionPerformed(ActionEvent e) {
     //     JRadioButton rb = (JRadioButton) e.getSource();
     //     // System.out.println("選択された年代: " + rb.getText());
     //     resultLabel.setText("選択された年代: " + rb.getText());
     //   }
-    // });
+    // };
     ActionListener radioListener = e -> {
       JRadioButton rb = (JRadioButton) e.getSource();
       // System.out.println("選択された年代: " + rb.getText());

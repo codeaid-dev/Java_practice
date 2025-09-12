@@ -1,3 +1,6 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
 public class SimpleCalculator {
@@ -8,6 +11,17 @@ public class SimpleCalculator {
     JButton addButton = new JButton("足す");
     JLabel resultLabel = new JLabel("結果: ");
 
+    // addButton.addActionListener(new ActionListener() {
+    //   public void actionPerformed(ActionEvent e) {
+    //     try {
+    //       int a = Integer.parseInt(field1.getText());
+    //       int b = Integer.parseInt(field2.getText());
+    //       resultLabel.setText("結果: " + (a + b));
+    //     } catch (NumberFormatException ex) {
+    //       resultLabel.setText("数値を入力してください");
+    //     }
+    //   }
+    // });
     addButton.addActionListener(e -> {
       try {
         int a = Integer.parseInt(field1.getText());
