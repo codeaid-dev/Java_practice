@@ -17,7 +17,7 @@ public class CalcQuiz extends JFrame {
   public CalcQuiz() {
     setTitle("一桁演算クイズ");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setSize(600, 300);
+    setSize(400, 300);
     setLayout(new GridBagLayout());
     GridBagConstraints gbc = new GridBagConstraints();
     gbc.insets = new Insets(5, 5, 5, 5);
