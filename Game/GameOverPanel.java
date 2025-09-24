@@ -1,36 +1,29 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.applet.*;
-import java.net.*;
 
 public class GameOverPanel extends JPanel implements ActionListener {
-  AppletContext ac;   // アプレットのコンテキスト
-  URL cb;   // HTML ファイルが存在する URL
-  Dimension size;   // アプレットの大きさ
+  Dimension size;
   MainPanel mp;
   JButton bt1, bt2, bt3;
 
   // コンストラクタ
-  public GameOverPanel(AppletContext ac1, URL cb1, Dimension size1, MainPanel mp1) {
-    ac   = ac1;
-    cb   = cb1;
+  public GameOverPanel(Dimension size1, MainPanel mp1) {
     size = size1;
     mp   = mp1;
 
-    // レイアウトマネージャの停止
     setLayout(null);
-    // 背景色の設定
     setBackground(Color.white);
-    // ボタンの配置
+
     Font f = new Font("SansSerif", Font.BOLD, 10);
     FontMetrics fm = getFontMetrics(f);
+
     String str1 = "終了";
     int w1 = fm.stringWidth(str1) + 40;
     int h1 = fm.getHeight() + 10;
     bt1 = new JButton(str1);
     bt1.setFont(f);
-    bt1.addActionListener(this);   // アクションリスナ
+    bt1.addActionListener(this);
     bt1.setSize(w1, h1);
 
     String str2 = "現在のレベルで再開";
@@ -38,7 +31,7 @@ public class GameOverPanel extends JPanel implements ActionListener {
     int h2 = fm.getHeight() + 10;
     bt2 = new JButton(str2);
     bt2.setFont(f);
-    bt2.addActionListener(this);   // アクションリスナ
+    bt2.addActionListener(this);
     bt2.setSize(w2, h2);
 
     String str3 = "最初から再開";
@@ -46,7 +39,7 @@ public class GameOverPanel extends JPanel implements ActionListener {
     int h3 = fm.getHeight() + 10;
     bt3 = new JButton(str3);
     bt3.setFont(f);
-    bt3.addActionListener(this);   // アクションリスナ
+    bt3.addActionListener(this);
     bt3.setSize(w3, h3);
 
     int w = size.width / 2 - (w1 + w2 + w3 + 10) / 2;
@@ -58,12 +51,11 @@ public class GameOverPanel extends JPanel implements ActionListener {
     w += (w2 + 5);
     bt3.setLocation(w, size.height-h1-20);
     add(bt3);
-
   }
 
   // 描画
   public void paintComponent(Graphics g) {
-    super.paintComponent(g);   // 親クラスの描画
+    super.paintComponent(g);
     Font f = new Font("SansSerif", Font.BOLD, 40);
     FontMetrics fm = g.getFontMetrics(f);
     String str = "Game Over!";
@@ -80,9 +72,10 @@ public class GameOverPanel extends JPanel implements ActionListener {
       bt2.setEnabled(false);
       bt3.setEnabled(false);
     }
-    else if (e.getSource() == bt2)   // 現在のレベルでゲーム再開
+    else if (e.getSource() == bt2) {   // 現在のレベルで再開
       mp.state = 1;
-    else {   // 最初からゲーム再開
+    }
+    else {   // 最初から再開
       mp.state = 0;
       mp.level = 1;
     }

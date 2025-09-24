@@ -1,23 +1,23 @@
-import java.awt.Container;
-import java.awt.Color;
-import java.awt.Graphics;
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 
-public class Game extends JFrame {  
+public class Game extends JPanel {  
   public Game() {
-    setSize(400, 300);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setTitle("Game");
-    setVisible(true);
+    setPreferredSize(new Dimension(500, 500));
+    setBackground(Color.ORANGE);
   }
 
-  public void paint(Graphics g) {
-    Container cp = getContentPane();
-    cp.setBackground(Color.ORANGE);
-    //cp.setBackground(new Color(180,255,180));
+    @Override
+  protected void paintComponent(Graphics g) {
+    super.paintComponent(g);
   }
 
   public static void main(String args[]) {
-    new Game();
+    JFrame frame = new JFrame("ゲーム");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.getContentPane().add(new Game());
+    frame.pack();
+    frame.setLocationRelativeTo(null);
+    frame.setVisible(true);
   }
 }
