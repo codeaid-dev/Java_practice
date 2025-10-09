@@ -7,3 +7,4 @@ output.txt
 /input.txt
 output.jpg
 /*.jpg
+!sample.jpg
