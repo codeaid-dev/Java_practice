@@ -5,8 +5,8 @@ import java.util.Set;
 
 public class Ex19 {
   public static void main(String[] args) {
-    Map<String,Double> m1 = new HashMap<>(Map.of("iPhone16",6.1,"iPhone16Pro",6.3,"iPhone16ProMax",6.9,"Pixel9",6.1));
-    Map<String,Double> m2 = new HashMap<>(Map.of("iPhone15",6.1,"iPhone16",6.1,"Pixel9",6.1));
+    Map<String,Double> m1 = new HashMap<>(Map.of("iPhone17",6.3,"iPhone17Pro",6.3,"iPhone16Plus",6.7,"Pixel10",6.3));
+    Map<String,Double> m2 = new HashMap<>(Map.of("iPhone16",6.1,"iPhone17",6.3,"Pixel10",6.3));
     Set<String> s1 = new HashSet<>(m1.keySet());
     Set<String> s2 = new HashSet<>(m2.keySet());
     s1.retainAll(s2);
