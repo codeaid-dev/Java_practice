@@ -21,13 +21,26 @@ public class ImageSample extends JPanel {
     int w = getWidth();
     int h = getHeight();
 
+    // 縦横比を維持してスケーリング
+    double scaleX = (double) w / imgWidth;
+    double scaleY = (double) h / imgHeight;
+    double scale = Math.min(scaleX, scaleY);
+    int newWidth = (int) (imgWidth * scale);
+    int newHeight = (int) (imgHeight * scale);
+
     // 画面中央
-    int centerX = (w-imgWidth)/2;
-    int centerY = (h-imgHeight)/2;
+    // int centerX = (w-imgWidth)/2;
+    // int centerY = (h-imgHeight)/2;
+    int centerX = (w-newWidth)/2;
+    int centerY = (h-newHeight)/2;
 
     // 画像を描画
     // g.drawImage(image, 0, 0, this); // 画面左上隅
-    g.drawImage(image, centerX, centerY, this); // 画面中央
+    // g.drawImage(image, centerX, centerY, this); // 画面中央
+    // パネルサイズに合わせて描画
+    // g.drawImage(image, 0, 0, w, h, this); // 画像が変形する
+    // パネルサイズに合わせるが比率は変えない
+    g.drawImage(image, centerX, centerY, newWidth, newHeight, this);
   }
 
   public static void main(String[] args) {
@@ -38,7 +51,7 @@ public class ImageSample extends JPanel {
     ImageSample panel = new ImageSample("images/sample.jpg");
 
     frame.add(panel);
-    frame.setSize(500, 400);
+    frame.setSize(500, 700);
     frame.setLocationRelativeTo(null); // モニター中央
     frame.setVisible(true);
   }
