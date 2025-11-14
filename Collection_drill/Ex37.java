@@ -14,7 +14,7 @@ public class Ex37 {
     for (Integer n : set) {
       int count=0;
       for (Integer i : nums) {
-        if (n == i) {
+        if (n.equals(i)) {
           count++;
         }
       }
