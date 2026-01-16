@@ -45,7 +45,11 @@ public class CalcBMI extends JFrame {
       try {
         double height = Double.parseDouble(heightField.getText());
         double weight = Double.parseDouble(weightField.getText());
+        if (height <= 0 || weight <= 0) {
+          throw new ArithmeticException();
+        }
         double bmi = weight / ((height/100)*(height/100));
+        System.out.println("bmi:"+bmi+" weight:"+weight+" height:"+height);
         String result;
         if (bmi < 16) { result = "痩せすぎ"; }
         else if (16.0 <= bmi && bmi <= 16.99) { result = "痩せ"; }
@@ -59,7 +63,7 @@ public class CalcBMI extends JFrame {
         resultLabel.setText(String.format("BMI値: %.2f 判定: %sです。", bmi, result));
         // bmi = (double)((int)(bmi*100))/100;
         // resultLabel.setText(String.format("BMI値: "+bmi+" 判定: "+result+"です。"));
-      } catch(NumberFormatException ex) {
+      } catch(NumberFormatException | ArithmeticException ex) {
         resultLabel.setForeground(Color.RED);
         resultLabel.setText("有効な数値を入力してください。");
       }
