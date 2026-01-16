@@ -50,6 +50,9 @@ public class CalcBMI extends JFrame {
         }
         double bmi = weight / ((height/100)*(height/100));
         System.out.println("bmi:"+bmi+" weight:"+weight+" height:"+height);
+        // if (Double.isInfinite(bmi) || Double.isNaN(bmi)) {
+        //     throw new NumberFormatException();
+        // }
         String result;
         if (bmi < 16) { result = "痩せすぎ"; }
         else if (16.0 <= bmi && bmi <= 16.99) { result = "痩せ"; }
