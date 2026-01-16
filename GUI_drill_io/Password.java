@@ -72,8 +72,7 @@ public class Password extends JFrame {
           result.setForeground(Color.BLACK);
           result.setText(String.valueOf(array));
         } else {
-          result.setForeground(Color.RED);
-          result.setText("桁数は8-32の整数を入力してください。");
+          throw new NumberFormatException();
         }
       } catch (NumberFormatException ex) {
         result.setForeground(Color.RED);
