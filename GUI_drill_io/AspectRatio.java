@@ -48,6 +48,9 @@ public class AspectRatio extends JFrame {
       try {
         int width = Integer.parseInt(widthField.getText());
         int height = Integer.parseInt(heightField.getText());
+        if (width <= 0 || height <= 0) {
+          throw new NumberFormatException();
+        }
         int g = gcd(width, height);
         int rw = width/g;
         int rh = height/g;

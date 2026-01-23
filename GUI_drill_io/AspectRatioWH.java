@@ -78,13 +78,15 @@ public class AspectRatioWH extends JFrame {
       try {
         aspectW = Integer.parseInt(aspect[0]);
         aspectH = Integer.parseInt(aspect[1]);
+        if (aspectW <= 0 || aspectH <= 0) throw new NumberFormatException();
       } catch(NumberFormatException ex) {
-        errorLabel.setText("アスペクト比は整数で入力してください。");
+        errorLabel.setText("アスペクト比は1以上の整数で入力してください。");
         return;
       }
       if (radio1.isSelected()) {
         try {
           int width = Integer.parseInt(widthField.getText());
+          if (width <= 0) throw new NumberFormatException();
           heightField.setText(String.valueOf((int)(width*(double)aspectH/aspectW)));
           errorLabel.setText("");
         } catch(NumberFormatException ex) {
@@ -93,6 +95,7 @@ public class AspectRatioWH extends JFrame {
       } else if (radio2.isSelected()) {
         try {
           int height = Integer.parseInt(heightField.getText());
+          if (height <= 0) throw new NumberFormatException();
           widthField.setText(String.valueOf((int)(height*(double)aspectW/aspectH)));
           errorLabel.setText("");
         } catch(NumberFormatException ex) {
