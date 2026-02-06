@@ -10,7 +10,8 @@ public class CalcQuiz extends JFrame {
   boolean start=false;
   int correct=0, incorrect=0;
   JLabel timerLabel;
-  JLabel mainLabel;
+  // JLabel mainLabel;
+  JTextArea mainLabel;
   JLabel resultLabel;
   int timeLeft = 60;
 
@@ -24,10 +25,22 @@ public class CalcQuiz extends JFrame {
   
     timerLabel = new JLabel("60");
     timerLabel.setFont(new Font("SansSerif", Font.PLAIN, 40));
-    mainLabel = new JLabel("<html>表示された数字の結果となる<br>"
-                             + "演算子をクリック<br>"
-                             + "制限時間は60秒!<br>"
-                             + "ここをクリックしてスタート</html>");
+    // mainLabel = new JLabel("<html><body style='width:200px;'>"
+    //                          + "表示された数字の結果となる<br>"
+    //                          + "演算子をクリック<br>"
+    //                          + "制限時間は60秒!<br>"
+    //                          + "ここをクリックしてスタート"
+    //                          + "</body></html>");
+    mainLabel = new JTextArea(
+              "表示された数字の結果となる\n" +
+              "演算子をクリック\n" +
+              "制限時間は60秒!\n" +
+              "ここをクリックしてスタート"
+    );
+    mainLabel.setEditable(false);
+    mainLabel.setOpaque(false);
+    mainLabel.setLineWrap(false);
+    mainLabel.setWrapStyleWord(true);
     mainLabel.setFont(new Font("SansSerif", Font.PLAIN, 20));
     JPanel panel = new JPanel();
     JButton additionButton = new JButton(operators[0]);
@@ -164,7 +177,8 @@ public class CalcQuiz extends JFrame {
       timerLabel.setText(String.valueOf(timeLeft));
       if (timeLeft <= 0) {
         ((Timer)e.getSource()).stop();
-        mainLabel.setText("<html>時間切れ！<br>もう一度クリックして再挑戦</html>");
+        // mainLabel.setText("<html>時間切れ！<br>もう一度クリックして再挑戦</html>");
+        mainLabel.setText("時間切れ！\nもう一度クリックして再挑戦");
         start = false;
       }
     });
