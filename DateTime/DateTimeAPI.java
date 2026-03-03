@@ -7,9 +7,9 @@ public class DateTimeAPI {
     LocalDateTime local = LocalDateTime.now();
     System.out.println(local);
     OffsetDateTime offset = OffsetDateTime.of(
-        2025, 12, 24, 15, 35, 30, 0, ZoneOffset.of("+09:00"));
+        2026, 12, 24, 15, 35, 30, 0, ZoneOffset.of("+09:00"));
     System.out.println(offset);
-    ZonedDateTime zoned = ZonedDateTime.parse("2025-12-24T15:35:30+09:00[Asia/Tokyo]");
+    ZonedDateTime zoned = ZonedDateTime.parse("2026-12-24T15:35:30+09:00[Asia/Tokyo]");
     System.out.println(zoned);
   }
 }
