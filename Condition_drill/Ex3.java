@@ -22,5 +22,14 @@ public class Ex3 {
         System.out.println("1〜12の数字を入力してください");
       }
     }
+
+    String result = switch (month) {
+      case 3,4,5 -> "春です";
+      case 6,7,8 -> "夏です";
+      case 9,10,11 -> "秋です";
+      case 12,1,2 -> "冬です";
+      default -> "1〜12の数字を入力してください";
+    };
+    System.out.println(result);
   }
 }
