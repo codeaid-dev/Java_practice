@@ -8,6 +8,8 @@ public class Ex14 {
       total += num;
       if (num != 0) cnt++;
     } while (num != 0);
-    System.out.println(cnt+"回入力・合計"+total+"・平均"+((double)total/cnt));
+    if (cnt != 0) {
+      System.out.println(cnt+"回入力・合計"+total+"・平均"+((double)total/cnt));
+    }
   }
 }
