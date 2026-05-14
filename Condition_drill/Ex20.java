@@ -3,7 +3,7 @@ public class Ex20 {
     System.out.print("入力 >>");
     String s1 = new java.util.Scanner(System.in).nextLine();
 //    String s1 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
-    System.out.print("数える文字列 >>");
+    System.out.print("数える文字 >>");
     String s2 = new java.util.Scanner(System.in).nextLine();
 //    String s2 = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] s1s = s1.split("");
