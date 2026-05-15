@@ -1,5 +1,3 @@
-package Exercise_condition_novice;
-
 import java.util.Random;
 import java.util.Scanner;
 
