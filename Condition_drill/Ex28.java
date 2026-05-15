@@ -4,7 +4,7 @@ public class Ex28 {
     String s = new java.util.Scanner(System.in).nextLine();
 //    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] nums = s.split(",");
-    int max=0;
+    int max=Integer.parseInt(nums[0]);
     for (String num : nums) {
       if (max < Integer.parseInt(num)) {
         max = Integer.parseInt(num);

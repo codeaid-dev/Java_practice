@@ -4,13 +4,13 @@ public class Ex29 {
     String s = new java.util.Scanner(System.in).nextLine();
 //    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
     String[] words = s.split(",");
-    String shortest = "";
-    String longest = "";
+    String shortest = words[0];
+    String longest = words[0];
     for (String word : words) {
       if (longest.length() <= word.length()) {
         longest = word;
       }
-      if (shortest.length() >= word.length() || shortest.length() == 0) {
+      if (shortest.length() >= word.length()) {
         shortest = word;
       }
     }
