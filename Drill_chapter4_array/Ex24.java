@@ -2,7 +2,7 @@ public class Ex24 {
   public static void main(String[] args) {
     int[] nums = new int[7];
     for (int i=0; i<nums.length; i++) {
-      nums[i] = new java.util.Random().nextInt(50)+10;
+      nums[i] = new java.util.Random().nextInt(41)+10;
     }
     System.out.println(java.util.Arrays.toString(nums));
     int min = nums[0];
