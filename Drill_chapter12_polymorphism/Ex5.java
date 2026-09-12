@@ -1,11 +1,11 @@
 class Person {
   String name;
   int age;
-  Person(String name) {
+  public Person(String name) {
     this.name = name;
   }
 
-  Person(String name, int age) {
+  public Person(String name, int age) {
     this.name = name;
     this.age = age;
   }

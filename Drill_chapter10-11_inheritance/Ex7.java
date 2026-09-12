@@ -1,13 +1,13 @@
 class Parent {
   String name;
-  Parent(String name) {
+  public Parent(String name) {
     this.name = name;
   }
 }
 
 class Child extends Parent {
   int age;
-  Child(String name, int age) {
+  public Child(String name, int age) {
     super(name);
     this.age = age;
   }

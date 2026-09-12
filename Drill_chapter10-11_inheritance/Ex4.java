@@ -6,7 +6,7 @@ class Shape {
 
 class Circle extends Shape {
   double radius;
-  Circle(double radius) {
+  public Circle(double radius) {
     this.radius = radius;
   }
 
