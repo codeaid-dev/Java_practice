@@ -9,6 +9,6 @@ public class Ex8 {
       }
     }
     System.out.println(java.util.Arrays.toString(nums));
-    System.out.println(result);
+    System.out.println(result.trim());
   }
 }
