@@ -8,3 +8,4 @@ output.txt
 output.jpg
 /*.jpg
 !sample.jpg
+sample
