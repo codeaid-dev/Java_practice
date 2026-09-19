@@ -1,21 +1,4 @@
-class Box {
-  private static int activeCount = 0;
-  private static final int MAX_BOXES = 3;
-
-  private Box() {
-    activeCount++;
-  }
-
-  public static Box createInstance() {
-    if (activeCount < MAX_BOXES) {
-      return new Box();
-    } else {
-      return null; // 制限超過
-    }
-  }
-}
-
-public class Ex14 {
+public class Main {
   public static void main(String[] args) {
     Box b1 = Box.createInstance();
     if (b1 == null) { System.out.println("b1はnullです"); }

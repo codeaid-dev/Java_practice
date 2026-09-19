@@ -1,4 +1,4 @@
-class Person {
+public class Person {
   private String name;
   private int age;
   public Person() {
@@ -26,15 +26,5 @@ class Person {
       throw new IllegalArgumentException("年齢が不正。処理を中断。");
     }
     this.age = age;
-  }
-}
-
-public class Ex3 {
-  public static void main(String[] args) {
-    Person person = new Person();
-    System.out.println("名前：" + person.getName() + " 年齢：" + person.getAge());
-    person.setAge(-1);
-    person.setName("山田太郎");
-    System.out.println("名前：" + person.getName() + " 年齢：" + person.getAge());
   }
 }

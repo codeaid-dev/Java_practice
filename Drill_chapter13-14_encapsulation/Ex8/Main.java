@@ -1,11 +1,4 @@
-class Counter {
-  static int count = 0;
-  public void increment() {
-    count++;
-  }
-}
-
-public class Ex8 {
+public class Main {
   public static void main(String[] args) {
 //    Counter.increment();
 //    Counter.increment();

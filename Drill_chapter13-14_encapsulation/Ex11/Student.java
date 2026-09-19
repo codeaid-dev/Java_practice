@@ -1,4 +1,4 @@
-class Student {
+public class Student {
   private String name;
   private int score;
 
@@ -16,13 +16,5 @@ class Student {
       throw new IllegalArgumentException("スコアは0〜100でなければなりません");
     }
     this.score = score;
-  }
-}
-
-public class Ex11 {
-  public static void main(String[] args) {
-    Student st1 = new Student("山田太郎", 70);
-    System.out.println("名前："+st1.getName()+"スコア："+st1.getScore());
-    Student st2 = new Student("田中二郎", -1);
   }
 }

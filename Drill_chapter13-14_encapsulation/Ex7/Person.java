@@ -1,4 +1,4 @@
-class Person {
+public class Person {
   private String name;
   private int age;
   public Person(String name, int age) {
@@ -10,11 +10,13 @@ class Person {
   public String toString() {
     return "名前：" + name + ", 年齢：" + age;
   }
-}
 
-public class Ex6 {
-  public static void main(String[] args) {
-    Person person = new Person("山田太郎", 25);
-    System.out.println(person);
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj instanceof Person person) {
+      return age == person.age && name.equals(person.name);
+    }
+    return false;
   }
 }
