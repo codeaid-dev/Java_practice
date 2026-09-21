@@ -1,9 +1,9 @@
-public class Dog extends Animal{
+public class Dog {
+  String name;
   public Dog(String name) {
-    super(name);
+    this.name = name;
   }
-  @Override
-  public void speak() {
-      System.out.println("ワンワン");
+  public void bark() {
+    System.out.println(name + "が吠えています");
   }
 }
