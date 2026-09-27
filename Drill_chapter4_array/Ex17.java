@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class Ex17 {
   public static void main(String[] args) {
-    int[] array1 = {3,6,9,12,15,18,21,100};
-    int[] array2 = {4,8,12,16,20,24,28,101};
+    int[] array1 = {3,6,9,12,15,18,21};
+    int[] array2 = {4,8,12,16,20,24,28};
     int len = array1.length/2;
     len += array2.length%2==0 ? array2.length/2 : array2.length/2+1;
     System.out.println(len);
