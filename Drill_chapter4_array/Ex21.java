@@ -4,14 +4,21 @@ public class Ex21 {
     System.out.print("ローテート数: ");
     int rotate = new java.util.Scanner(System.in).nextInt();
 //    int rotate = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    for (int r = 0; r < rotate; r++) {
-      int first = numbers[0];
-      for (int i = 1; i < numbers.length; i++) {
-        numbers[i - 1] = numbers[i];
-      }
-      numbers[numbers.length - 1] = first;
+    // for (int r = 0; r < rotate; r++) {
+    //   int first = numbers[0];
+    //   for (int i = 1; i < numbers.length; i++) {
+    //     numbers[i - 1] = numbers[i];
+    //   }
+    //   numbers[numbers.length - 1] = first;
+    // }
+
+    // 別の配列に作成する場合
+    int[] nums = new int[numbers.length];
+    for (int i = 0; i < numbers.length; i++) {
+      nums[i] = numbers[(i+rotate)%5];
     }
 
-    System.out.println("ローテートした配列: " + java.util.Arrays.toString(numbers));
+    // System.out.println("ローテートした配列: " + java.util.Arrays.toString(numbers));
+    System.out.println("ローテートした配列: " + java.util.Arrays.toString(nums));
   }
 }
