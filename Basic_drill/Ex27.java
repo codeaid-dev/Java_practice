@@ -1,8 +1,11 @@
 public class Ex27 {
   public static void main(String[] args) {
     System.out.print("入力 >>");
-    String s = new java.util.Scanner(System.in).nextLine();
-//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
-    System.out.println(s.substring(0,s.length()/2));
+    int num = new java.util.Scanner(System.in).nextInt();
+//    int num = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
+    int H = num/3600;
+    int M = num%3600/60;
+    int S = num%60;
+    System.out.println(H+"時間"+M+"分"+S+"秒");
   }
 }

@@ -1,11 +1,9 @@
 public class Ex36 {
   public static void main(String[] args) {
-    System.out.print("予算 >>");
-    int N = new java.util.Scanner(System.in).nextInt();
-//    int N = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.print("人数 >>");
-    int M = new java.util.Scanner(System.in).nextInt();
-//    int M = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.println("お年玉は"+(N / (M*1000)) * 1000+"円");
+    String[] seasons = {"冬", "春", "夏", "秋"};
+    System.out.print("1~12で月を入力>>");
+    int month = new java.util.Scanner(System.in).nextInt();
+//    int month = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
+    System.out.println(month+"月は、"+seasons[month/3%4]+"です");
   }
 }

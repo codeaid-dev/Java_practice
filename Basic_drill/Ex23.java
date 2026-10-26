@@ -1,16 +1,13 @@
 public class Ex23 {
   public static void main(String[] args) {
-    int turi = 1000-308;
-    System.out.println("500円玉は"+turi/500+"枚");
-    turi -= turi/500*500;
-    System.out.println("100円玉は"+turi/100+"枚");
-    turi -= turi/100*100;
-    System.out.println("50円玉は"+turi/50+"枚");
-    turi -= turi/50*50;
-    System.out.println("10円玉は"+turi/10+"枚");
-    turi -= turi/10*10;
-    System.out.println("5円玉は"+turi/5+"枚");
-    turi -= turi/5*5;
-    System.out.println("1円玉は"+turi+"枚");
+    double a = 36.24;
+    double b = 36.354;
+    String str = "foobar";
+    int num = 15;
+    System.out.println(String.format("体温は%.1fです", a));
+    System.out.printf("体温は%.2fです\n",b);
+    System.out.println(String.format("体温は%dです", (int)a));
+    System.out.println(String.format("「%.3s」", str));
+    System.out.println(String.format("「%05d」", num));
   }
 }

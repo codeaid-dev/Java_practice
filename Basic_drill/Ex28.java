@@ -1,12 +1,11 @@
 public class Ex28 {
   public static void main(String[] args) {
     System.out.print("入力 >>");
-    String s = new java.util.Scanner(System.in).nextLine();
-//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
-    System.out.print("文字数 >>");
-    int num = new java.util.Scanner(System.in).nextInt();
-//    int num = new java.util.Scanner(System.in, "Shift-JIS").nextInt();
-    String upper = s.substring(0,num).toUpperCase();
-    System.out.println(upper+s.substring(num));
+    int n1 = new java.util.Scanner(System.in).nextInt();
+//    int n1 = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
+    int n2 = n1/3;
+    int n3 = ((n1%3)/2)+n2;
+    int n4 = ((n1%3)/2)+((n1%3)%2)+n2;
+    System.out.println(n2+"+"+n3+"+"+n4+"="+(n2+n3+n4));
   }
 }

@@ -1,7 +1,6 @@
 public class Ex16 {
   public static void main(String[] args) {
-    String w1 = "This is a ballpen. This ballpen is comfortable to write on.";
-    System.out.println(w1);
-    System.out.println(w1.replace("ball", ""));
+    double ans = Math.sqrt(113.04/4/3.14);
+    System.out.println("表面積が113.04平方cmの球の半径は"+ans+"cm");
   }
 }

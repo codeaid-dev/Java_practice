@@ -1,11 +1,7 @@
 public class Ex30 {
   public static void main(String[] args) {
-    System.out.print("入力1 >>");
-    int n1 = new java.util.Scanner(System.in).nextInt();
-//    int n1 = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.print("入力2 >>");
-    int n2 = new java.util.Scanner(System.in).nextInt();
-//    int n2 = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.println(n1+"x"+n2+"="+(n1*n2)+"の結果は"+(String.valueOf(n1*n2).length())+"桁");
+    double n1 = (0.45+1.8)/0.3;
+    double n2 = (0.45+1.8)/(0.3+0.035);
+    System.out.println("計算上は"+(int)n1+"人、実際には"+(int)n2+"人");
   }
 }

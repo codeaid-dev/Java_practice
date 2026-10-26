@@ -1,7 +1,14 @@
 public class Ex18 {
   public static void main(String[] args) {
-    String words = "しばらくすると信号機が赤に変わった";
-    int index = words.indexOf("赤");
-    System.out.println(words.substring(0, index)+"青"+words.substring(index+1));
+    System.out.print("目 >>");
+    String eye = new java.util.Scanner(System.in).nextLine();
+//    String eye = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
+    System.out.print("口 >>");
+    String mouth = new java.util.Scanner(System.in).nextLine();
+//    String mouth = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
+    String face = "(^o^)/";
+    face = face.replace("^",eye);
+    face = face.replace("o",mouth);
+    System.out.println(face);
   }
 }

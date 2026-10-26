@@ -1,9 +1,12 @@
 public class Ex20 {
   public static void main(String[] args) {
-    String word = "   Hello World!   ";
-    System.out.println(word.stripTrailing()+":");
-    System.out.println(word.stripLeading()+":");
-    System.out.println(word.strip()+":");
-//    System.out.println(word.trim()+":");
+    System.out.print("入力 >>");
+    String s = new java.util.Scanner(System.in).nextLine();
+//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
+    String r = s.substring(0,s.length()/2);
+    String l = s.substring(s.length()/2);
+    int rn = Integer.parseInt(r);
+    int ln = Integer.parseInt(l);
+    System.out.println((rn*2) + " " + (ln/2));
   }
 }

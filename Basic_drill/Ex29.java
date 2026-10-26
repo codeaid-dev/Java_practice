@@ -1,12 +1,8 @@
 public class Ex29 {
   public static void main(String[] args) {
-    System.out.print("入力 >>");
-    String s = new java.util.Scanner(System.in).nextLine();
-//    String s = new java.util.Scanner(System.in, "Shift-JIS").nextLine(); //for Windows
-    String r = s.substring(0,s.length()/2);
-    String l = s.substring(s.length()/2);
-    int rn = Integer.parseInt(r);
-    int ln = Integer.parseInt(l);
-    System.out.println((rn*2) + " " + (ln/2));
+    System.out.print("時間(分) >>");
+    int m = new java.util.Scanner(System.in).nextInt();
+//    int m = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
+    System.out.println("総フレーム数："+(m*60*60));
   }
 }

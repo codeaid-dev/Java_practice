@@ -1,11 +1,11 @@
 public class Ex9 {
   public static void main(String[] args) {
-    System.out.print("底辺 >>");
-    int bottom = new java.util.Scanner(System.in).nextInt();
-//    int bottom = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.print("高さ >>");
-    int height = new java.util.Scanner(System.in).nextInt();
-//    int height = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.println("底辺"+bottom+"cmで高さ"+height+"cmの三角形の面積は"+bottom*height/2+"平方cmです");
+    System.out.print("左辺入力 >>");
+    int left = new java.util.Scanner(System.in).nextInt();
+//    int left = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
+    System.out.print("右辺入力 >>");
+    int right = new java.util.Scanner(System.in).nextInt();
+//    int right = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
+    System.out.println(left+"割る"+right+"は、"+left/right+"余り"+left%right+"です");
   }
 }

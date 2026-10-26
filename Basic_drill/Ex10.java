@@ -1,14 +1,11 @@
 public class Ex10 {
   public static void main(String[] args) {
-    System.out.print("上底 >>");
-    int up = new java.util.Scanner(System.in).nextInt();
-//    int up = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.print("下底 >>");
-    int bottom = new java.util.Scanner(System.in).nextInt();
-//    int bottom = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.print("高さ >>");
-    int height = new java.util.Scanner(System.in).nextInt();
-//    int height = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
-    System.out.println("上底"+up+"cmと下底"+bottom+"cmで高さ"+height+"cmの台形の面積は"+(up+bottom)*height/2+"平方cmです");
+    System.out.print("英語 >>");
+    int e = new java.util.Scanner(System.in).nextInt();
+//    int e = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
+    System.out.print("数学 >>");
+    int m = new java.util.Scanner(System.in).nextInt();
+//    int m = new java.util.Scanner(System.in, "Shift-JIS").nextInt(); //for Windows
+    System.out.println("英語"+e+"点、数学"+m+"点の平均点は"+(double)(e+m)/2+"点です");
   }
 }

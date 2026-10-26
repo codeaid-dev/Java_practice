@@ -1,4 +1,4 @@
-public class Ex32des {
+public class Ex23des {
   public static void main(String[] args) {
     // 文字列
     String str = "sample";
