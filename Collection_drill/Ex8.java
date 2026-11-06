@@ -11,7 +11,8 @@ public class Ex8 {
 //    Set<String> setB = new HashSet<>(Arrays.asList(B));
     Set<String> setB = new HashSet<>(Set.of(B));
     setA.retainAll(setB);
-    System.out.println(setA.toString());
+    System.out.println("2人とも行ったことのある場所："+setA.toString());
+
 //    setA = new HashSet<>(Arrays.asList(A));
     setA = new HashSet<>(Set.of(A));
     setA.removeAll(setB);
@@ -19,7 +20,7 @@ public class Ex8 {
     Set<String> setC = new HashSet<>(Set.of(A));
     setB.removeAll(setC);
     setA.addAll(setB);
-    System.out.println(setA.toString());
+    System.out.println("1人しか行ったことのない場所："+setA.toString());
 
   }
 }
