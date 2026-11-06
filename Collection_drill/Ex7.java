@@ -16,5 +16,10 @@ public class Ex7 {
     s2.removeAll(s3);
     s1.addAll(s2);
     System.out.println(s1.toString());
+    // Object[] l3 = s1.toArray();
+    // Integer[] l3 = new Integer[s1.size()];
+    // l3 = s1.toArray(l3);
+    Integer[] l3 = s1.toArray(new Integer[0]);
+    System.out.println(Arrays.toString(l3));
   }
 }

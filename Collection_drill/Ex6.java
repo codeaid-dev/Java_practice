@@ -10,16 +10,23 @@ public class Ex6 {
     Set<Character> set1 = new HashSet<>(Set.of(c1));
 //    Set<Character> set2 = new HashSet<>(Arrays.asList(c2));
     Set<Character> set2 = new HashSet<>(Set.of(c2));
+    // set1,set2の要素全て
     set1.addAll(set2);
     System.out.println(set1.toString());
+
+    // 両方にある要素
 //    set1 = new HashSet<>(Arrays.asList(c1));
     set1 = new HashSet<>(Set.of(c1));
     set1.retainAll(set2);
     System.out.println(set1.toString());
+
+    // set1にしかない要素
 //    set1 = new HashSet<>(Arrays.asList(c1));
     set1 = new HashSet<>(Set.of(c1));
     set1.removeAll(set2);
     System.out.println(set1.toString());
+
+    // set1, set2の片方にしかない要素
 //    set1 = new HashSet<>(Arrays.asList(c1));
     set1 = new HashSet<>(Set.of(c1));
 //    Set<Character> set3 = new HashSet<>(Arrays.asList(c1));
